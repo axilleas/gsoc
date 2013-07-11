@@ -199,14 +199,14 @@ def populate_dicts():
 
   return (gitlab, fedora, upstream)
 
-def all_versions_dict(dicts):
+def all_versions(dicts):
   '''tuple -> dict
   Returns a dictionary with key the name of the gem and key a list of versions of
   gitlab, fedora and upstream with this order. Run populate_dicts() first.
 
   Example:
   >>>dicts = populate_dicts()
-  >>>all = all_versions_dict(dicts)
+  >>>all = all_versions(dicts)
   '''
   versions = {}
   for gem in dicts[0].keys():
@@ -220,8 +220,9 @@ def wiki_table():
   Results go in https://fedoraproject.org/wiki/User:Axilleas/GitLab
   '''
   gitlab = gitlab_gems_runtime(gitlab_gems_file)
-  versions = all_versions_dict()
-
+  dicts = populate_dicts()
+  versions = all_versions(dicts)
+  
   with open(versions_table, 'a') as f:
     for gem in sorted(gitlab.keys()):
       f.write('|-' + '\n' + '|' + gem + '\n' + '|' + versions[gem][0] + '\n' + '|' \
