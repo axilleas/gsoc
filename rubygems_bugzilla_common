@@ -1,0 +1,11 @@
+mysql2
+bootstrap-sass
+redis
+faraday
+chosen-rails
+backports
+stringex
+dotenv
+yajl-ruby
+connection_pool
+timers
