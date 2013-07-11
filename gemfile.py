@@ -199,13 +199,15 @@ def populate_dicts():
 
   return (gitlab, fedora, upstream)
 
-def all_versions_dict():
-  '''
-  Returns a list with these dictionaries in this order:
-  gitlab, fedora, upstream
-  '''
+def all_versions_dict(dicts):
+  '''tuple -> dict
+  Returns a dictionary with key the name of the gem and key a list of versions of
+  gitlab, fedora and upstream with this order. Run populate_dicts() first.
 
-  dicts = populate_dicts()
+  Example:
+  >>>dicts = populate_dicts()
+  >>>all = all_versions_dict(dicts)
+  '''
   versions = {}
   for gem in dicts[0].keys():
     versions[gem] = [dicts[0][gem], dicts[1][gem], dicts[2][gem]]
