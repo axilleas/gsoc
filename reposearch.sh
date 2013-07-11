@@ -1,9 +1,9 @@
 #!/bin/bash
 
-fedora_gems_raw='/home/axil/fedora/gitlab-deps/rubygems_fedora_raw'
-fedora_gems='/home/axil/fedora/gitlab-deps/rubygems_fedora'
-bugzilla_gems_raw='/home/axil/fedora/gitlab-deps/rubygems_bugzilla_raw'
-bugzilla_gems='/home/axil/fedora/gitlab-deps/rubygems_bugzilla'
+fedora_gems_raw=$PWD/rubygems_fedora_raw
+fedora_gems=$PWD/rubygems_fedora
+bugzilla_gems_raw=$PWD/rubygems_bugzilla_raw
+bugzilla_gems=$PWD/rubygems_bugzilla
 
 # Remove files if already exist
 ls -l | grep rubygem > /dev/null 2>&1
