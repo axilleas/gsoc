@@ -37,6 +37,7 @@ backports
 redis-rack
 stringex
 tzinfo
+kgio
 ref
 temple
 coffee-script-source
@@ -59,6 +60,7 @@ stamp
 yajl-ruby
 warden
 twitter-stream
+unicorn
 nokogiri
 hashie
 polyglot
@@ -76,7 +78,6 @@ acts-as-taggable-on
 carrierwave
 rails
 faraday_middleware
-json
 pg
 redis-rails
 bootstrap-sass
@@ -126,6 +127,7 @@ gitlab_git
 journey
 omniauth-oauth2
 redcarpet
+raindrops
 underscore-rails
 actionmailer
 railties

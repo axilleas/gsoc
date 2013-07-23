@@ -10,7 +10,7 @@ import pkgwat.api
 
 # Declare files
 
-gitlab_gems_file = os.path.realpath('gitlab53-gems')
+gitlab_gems_file = os.path.realpath('gitlab54-gems')
 rubygems_fedora = os.path.realpath('rubygems_fedora')
 rubygems_gitlab = os.path.realpath('rubygems_gitlab')
 rubygems_missing = os.path.realpath('rubygems_missing')
@@ -22,6 +22,7 @@ gems_versions_json = os.path.realpath('all_versions.json')
 gems_bugzilla = os.path.realpath('rubygems_bugzilla_raw')
 gems_bugzilla_common = os.path.realpath('rubygems_bugzilla_common')
 versions_table = os.path.realpath('wiki_table_versions')
+missing_table = os.path.realpath('wiki_table_missing')
 
 
 def gitlab_gems_all():
@@ -214,7 +215,7 @@ def all_versions(dicts):
  
   return versions
 
-def wiki_table():
+def wiki_versions_table():
   '''
   Wikify the versions of gems among gitlab, fedora and upstream.
   Results go in https://fedoraproject.org/wiki/User:Axilleas/GitLab
@@ -222,12 +223,70 @@ def wiki_table():
   gitlab = gitlab_gems_runtime(gitlab_gems_file)
   dicts = populate_dicts()
   versions = all_versions(dicts)
-  
-  with open(versions_table, 'a') as f:
-    for gem in sorted(gitlab.keys()):
-      f.write('|-' + '\n' + '|' + gem + '\n' + '|' + versions[gem][0] + '\n' + '|' \
-      + versions[gem][1] + '\n' + '|' + versions[gem][2] + '\n')
 
+  if os.path.isfile(versions_table):
+    os.remove(versions_table)
+
+  with open(versions_table, 'a') as f:
+    f.write('{| class="wikitable" style="text-align: center;" cellpadding="10"' + '\n' + \
+        '!colspan="5"|GitLab gem dependencies' + '\n' + \
+        '|-' + '\n' + \
+        '|rowspan="2"|Ruby gem'  + '\n' + \
+        '|colspan="3"|Version'  + '\n' + \
+        '|-'  + '\n' + \
+        '|GitLab (Gemfile)'  + '\n' + \
+        '|Fedora (rawhide)'  + '\n' + \
+        '|Upstream (rubygems.org)')
+
+    for gem in sorted(gitlab.keys()):
+      f.write('\n' + '|-' + '\n' + '|' + gem + '\n' + '|' + versions[gem][0] + '\n' + '|' \
+      + versions[gem][1] + '\n' + '|' + versions[gem][2])
+
+    f.write('\n' + '|}')
+
+def wiki_missing_table():
+  '''
+  Writes to a file the missing gems in a Wiki table.
+  Results go in https://fedoraproject.org/wiki/User:Axilleas/GitLab#Missing_gems
+  '''
+  
+  gitlab = gitlab_gems_runtime(gitlab_gems_file)
+  
+  fedora = []
+  with open(rubygems_fedora,'r') as f:
+    for gem in f.readlines():
+      fedora.append(gem.strip('\n'))
+
+  common = find_common(gitlab.keys(), fedora)
+  missing_gems = find_missing(gitlab.keys(), common)
+  
+  bz = bugzilla_gems(gems_bugzilla)
+  bz_common = []
+  for gem in bz.keys():
+    if gem in missing_gems:
+      bz_common.append(gem)
+   
+  if os.path.isfile(missing_table):
+    os.remove(missing_table)
+
+  with open(missing_table, 'a') as f:
+    f.write('{| class="wikitable" style="text-align: center;" cellpadding="10"' + '\n' + \
+        '!colspan=""|GitLab missing gems' + '\n' + \
+        '|-' + '\n' + \
+        '!Ruby gem'  + '\n' + \
+        '!Bugzilla id'  + '\n' + \
+        '!Status' + '\n')
+    for gem in missing_gems:
+      if gem in bz_common:
+        f.write('|-' + '\n' + '|' + gem + '\n' + \
+            '|[https://bugzilla.redhat.com/show_bug.cgi?id=' + bz[gem][0] + ' ' + bz[gem][0] + ']' + '\n' + \
+            '|' + bz[gem][1] + '\n')
+      else:
+        f.write('|-' + '\n' + '|' + gem + '\n' + \
+            '| - \n' + \
+            '| - \n')
+      
+    f.write('|}')
 
 def main():
   

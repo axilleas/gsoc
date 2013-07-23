@@ -128,6 +128,8 @@
 :
 :
 :
+:
+:
 ...:
 rubygem-abrt-doc.noarch
 rubygem-abrt.noarch
@@ -191,6 +193,7 @@ rubygem-bacon-doc.noarch
 rubygem-bacon.noarch
 rubygem-bcrypt-ruby.x86_64
 rubygem-bigdecimal.x86_64
+rubygem-bootstrap-sass.noarch
 rubygem-boxgrinder-build-doc.noarch
 rubygem-boxgrinder-build.noarch
 rubygem-boxgrinder-core-doc.noarch
@@ -211,6 +214,7 @@ rubygem-cairo-doc.x86_64
 rubygem-cairo.x86_64
 rubygem-capybara-doc.noarch
 rubygem-capybara.noarch
+rubygem-charlock_holmes.x86_64
 rubygem-childprocess-doc.noarch
 rubygem-childprocess.noarch
 rubygem-chronic-doc.noarch
@@ -385,6 +389,7 @@ rubygem-haml-rails-doc.noarch
 rubygem-haml-rails.noarch
 rubygem-hashery-doc.noarch
 rubygem-hashery.noarch
+rubygem-hashie.noarch
 rubygem-hashr-doc.noarch
 rubygem-hashr.noarch
 rubygem-hawler.noarch
@@ -722,6 +727,7 @@ rubygem-ruby-rc4.noarch
 rubygem-rubyzip-doc.noarch
 rubygem-rubyzip.noarch
 rubygem-rufus-scheduler.noarch
+rubygem-rugged.x86_64
 rubygem-sanitize.noarch
 rubygem-sass-doc.noarch
 rubygem-sass.noarch

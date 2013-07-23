@@ -31,6 +31,7 @@ aws-sdk
 bacon
 bcrypt-ruby
 bigdecimal
+bootstrap-sass
 boxgrinder-build
 boxgrinder-core
 bson_ext
@@ -40,6 +41,7 @@ bundler
 bunny
 cairo
 capybara
+charlock_holmes
 childprocess
 chronic
 chunky_png
@@ -125,6 +127,7 @@ gtksourceview2
 haml
 haml-rails
 hashery
+hashie
 hashr
 hawler
 heroku-api
@@ -306,6 +309,7 @@ ruby_parser
 ruby-rc4
 rubyzip
 rufus-scheduler
+rugged
 sanitize
 sass
 sass-rails

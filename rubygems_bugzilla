@@ -6,7 +6,6 @@ backports
 barista
 blankslate
 bluecloth
-bootstrap-sass
 bundler_ext
 chardet
 chef
@@ -21,6 +20,7 @@ dotenv
 extlib
 faker
 faraday
+fast_xs
 font-awesome-sass-rails
 gdk3
 gem-open
@@ -48,15 +48,16 @@ ruby-pcap
 ruby-shadow
 rubytree
 rugged
+safe_yaml
 serialport
 sfcc
+sprockets-rails
 stringex
 strong_parameters
 teamocil
 thread_safe
 tidy_ffi
 time-lord
-timers
 unf
 unf_ext
 unicorn

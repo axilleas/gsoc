@@ -1,0 +1,315 @@
+{| class="wikitable" style="text-align: center;" cellpadding="10"
+!colspan=""|GitLab missing gems
+|-
+!Ruby gem
+!Bugzilla id
+!Status
+|-
+|acts-as-taggable-on
+| - 
+| - 
+|-
+|backports
+|[https://bugzilla.redhat.com/show_bug.cgi?id=816991 816991]
+|NEW
+|-
+|carrierwave
+| - 
+| - 
+|-
+|celluloid
+| - 
+| - 
+|-
+|chosen-rails
+|[https://bugzilla.redhat.com/show_bug.cgi?id=967396 967396]
+|ASSIGNED
+|-
+|connection_pool
+|[https://bugzilla.redhat.com/show_bug.cgi?id=967334 967334]
+|ASSIGNED
+|-
+|d3_rails
+| - 
+| - 
+|-
+|descendants_tracker
+| - 
+| - 
+|-
+|devise
+| - 
+| - 
+|-
+|dotenv
+|[https://bugzilla.redhat.com/show_bug.cgi?id=967335 967335]
+|ASSIGNED
+|-
+|enumerize
+| - 
+| - 
+|-
+|escape_utils
+| - 
+| - 
+|-
+|faraday
+|[https://bugzilla.redhat.com/show_bug.cgi?id=967337 967337]
+|NEW
+|-
+|faraday_middleware
+| - 
+| - 
+|-
+|font-awesome-rails
+| - 
+| - 
+|-
+|foreman
+| - 
+| - 
+|-
+|gemoji
+| - 
+| - 
+|-
+|github-linguist
+| - 
+| - 
+|-
+|github-markdown
+| - 
+| - 
+|-
+|github-markup
+| - 
+| - 
+|-
+|gitlab-gollum-lib
+| - 
+| - 
+|-
+|gitlab-grack
+| - 
+| - 
+|-
+|gitlab-grit
+| - 
+| - 
+|-
+|gitlab-pygments.rb
+| - 
+| - 
+|-
+|gitlab_git
+| - 
+| - 
+|-
+|gitlab_meta
+| - 
+| - 
+|-
+|gitlab_omniauth-ldap
+| - 
+| - 
+|-
+|gon
+| - 
+| - 
+|-
+|grape
+| - 
+| - 
+|-
+|grape-entity
+| - 
+| - 
+|-
+|hipchat
+| - 
+| - 
+|-
+|http_parser.rb
+| - 
+| - 
+|-
+|httpauth
+| - 
+| - 
+|-
+|jquery-atwho-rails
+| - 
+| - 
+|-
+|jquery-turbolinks
+| - 
+| - 
+|-
+|jquery-ui-rails
+| - 
+| - 
+|-
+|jwt
+| - 
+| - 
+|-
+|kaminari
+| - 
+| - 
+|-
+|libv8
+| - 
+| - 
+|-
+|modernizr
+| - 
+| - 
+|-
+|mysql2
+|[https://bugzilla.redhat.com/show_bug.cgi?id=974889 974889]
+|ASSIGNED
+|-
+|oauth2
+| - 
+| - 
+|-
+|omniauth
+| - 
+| - 
+|-
+|omniauth-github
+| - 
+| - 
+|-
+|omniauth-google-oauth2
+| - 
+| - 
+|-
+|omniauth-oauth
+| - 
+| - 
+|-
+|omniauth-oauth2
+| - 
+| - 
+|-
+|omniauth-twitter
+| - 
+| - 
+|-
+|orm_adapter
+| - 
+| - 
+|-
+|posix-spawn
+| - 
+| - 
+|-
+|puma
+| - 
+| - 
+|-
+|pygments.rb
+| - 
+| - 
+|-
+|pyu-ruby-sasl
+| - 
+| - 
+|-
+|redis
+|[https://bugzilla.redhat.com/show_bug.cgi?id=978284 978284]
+|ASSIGNED
+|-
+|redis-actionpack
+| - 
+| - 
+|-
+|redis-activesupport
+| - 
+| - 
+|-
+|redis-namespace
+| - 
+| - 
+|-
+|redis-rack
+| - 
+| - 
+|-
+|redis-rails
+| - 
+| - 
+|-
+|redis-store
+| - 
+| - 
+|-
+|rubyntlm
+| - 
+| - 
+|-
+|seed-fu
+| - 
+| - 
+|-
+|select2-rails
+| - 
+| - 
+|-
+|settingslogic
+| - 
+| - 
+|-
+|sidekiq
+| - 
+| - 
+|-
+|simple_oauth
+| - 
+| - 
+|-
+|six
+| - 
+| - 
+|-
+|stamp
+| - 
+| - 
+|-
+|stringex
+|[https://bugzilla.redhat.com/show_bug.cgi?id=728051 728051]
+|ASSIGNED
+|-
+|timers
+| - 
+| - 
+|-
+|tinder
+| - 
+| - 
+|-
+|turbolinks
+| - 
+| - 
+|-
+|twitter-stream
+| - 
+| - 
+|-
+|underscore-rails
+| - 
+| - 
+|-
+|unicorn
+|[https://bugzilla.redhat.com/show_bug.cgi?id=786636 786636]
+|NEW
+|-
+|virtus
+| - 
+| - 
+|-
+|yajl-ruby
+|[https://bugzilla.redhat.com/show_bug.cgi?id=823351 823351]
+|ASSIGNED
+|}

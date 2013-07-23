@@ -1,9 +1,7 @@
 acts-as-taggable-on
 backports
-bootstrap-sass
 carrierwave
 celluloid
-charlock_holmes
 chosen-rails
 connection_pool
 d3_rails
@@ -30,7 +28,6 @@ gitlab_omniauth-ldap
 gon
 grape
 grape-entity
-hashie
 hipchat
 http_parser.rb
 httpauth
@@ -75,5 +72,6 @@ tinder
 turbolinks
 twitter-stream
 underscore-rails
+unicorn
 virtus
 yajl-ruby

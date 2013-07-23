@@ -7,7 +7,9 @@ activesupport
 arel
 asciidoctor
 bcrypt-ruby
+bootstrap-sass
 builder
+charlock_holmes
 coffee-rails
 coffee-script
 coffee-script-source
@@ -18,12 +20,13 @@ eventmachine
 execjs
 haml
 haml-rails
+hashie
 hike
 httparty
 i18n
 journey
 jquery-rails
-json
+kgio
 mail
 mime-types
 multi_json
@@ -43,6 +46,7 @@ rack-ssl
 rack-test
 rails
 railties
+raindrops
 rake
 rdoc
 redcarpet
