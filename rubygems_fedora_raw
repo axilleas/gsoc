@@ -130,6 +130,8 @@
 :
 :
 :
+:
+:
 ...:
 rubygem-abrt-doc.noarch
 rubygem-abrt.noarch
@@ -193,6 +195,7 @@ rubygem-bacon-doc.noarch
 rubygem-bacon.noarch
 rubygem-bcrypt-ruby.x86_64
 rubygem-bigdecimal.x86_64
+rubygem-bootstrap-sass-doc.noarch
 rubygem-bootstrap-sass.noarch
 rubygem-boxgrinder-build-doc.noarch
 rubygem-boxgrinder-build.noarch
@@ -572,6 +575,7 @@ rubygem-pango.x86_64
 rubygem-paranoia-doc.noarch
 rubygem-paranoia.noarch
 rubygem-parseconfig.noarch
+rubygem-passenger-debuginfo.x86_64
 rubygem-passenger-devel.i686
 rubygem-passenger-devel.x86_64
 rubygem-passenger-doc.noarch
@@ -611,6 +615,7 @@ rubygem-psych.x86_64
 rubygem-puppet-lint-doc.noarch
 rubygem-puppet-lint.noarch
 rubygem-qpid-doc.noarch
+rubygem-qpid_messaging-debuginfo.x86_64
 rubygem-qpid_messaging-doc.noarch
 rubygem-qpid_messaging.x86_64
 rubygem-qpid_proton-doc.noarch

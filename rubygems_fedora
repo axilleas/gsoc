@@ -226,6 +226,7 @@ pam
 pango
 paranoia
 parseconfig
+passenger-debuginfo
 passenger-native-libs
 passenger-native
 passenger
@@ -246,6 +247,7 @@ progressbar
 pry
 psych
 puppet-lint
+qpid_messaging-debuginfo
 qpid_messaging
 qpid_proton
 qpid
