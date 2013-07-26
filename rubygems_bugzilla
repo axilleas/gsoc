@@ -34,6 +34,7 @@ jammit
 log4r
 lumberjack
 memcache-client
+mobileesp_converted
 mysql2
 ohai
 openshift-origin-auth-kerberos
