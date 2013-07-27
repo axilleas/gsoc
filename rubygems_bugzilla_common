@@ -1,10 +1,13 @@
 mysql2
 redis
-faraday
 chosen-rails
+faraday
 backports
 stringex
+sanitize
 dotenv
 yajl-ruby
 unicorn
 connection_pool
+orm_adapter
+charlock_holmes

@@ -8,6 +8,7 @@ blankslate
 bluecloth
 bundler_ext
 chardet
+charlock_holmes
 chef
 chosen-rails
 closure-compiler
@@ -29,6 +30,7 @@ gli
 gtk3
 guard
 hoe-yard
+hoptoad_notifier
 icaro
 jammit
 log4r
@@ -39,6 +41,7 @@ mysql2
 ohai
 openshift-origin-auth-kerberos
 openshift-origin-console
+orm_adapter
 paint
 parslet
 prototype-rails
@@ -50,6 +53,8 @@ ruby-shadow
 rubytree
 rugged
 safe_yaml
+sanitize
+sass-twitter-bootstrap
 serialport
 sfcc
 sprockets-rails
@@ -66,6 +71,7 @@ useragent
 uuid
 vagrant
 wrongdoc
+xmlhash
 yajl-ruby
 yui-compressor
 zbxapi

@@ -2,6 +2,7 @@ acts-as-taggable-on
 backports
 carrierwave
 celluloid
+charlock_holmes
 chosen-rails
 connection_pool
 d3_rails
@@ -59,6 +60,7 @@ redis-rack
 redis-rails
 redis-store
 rubyntlm
+sanitize
 seed-fu
 select2-rails
 settingslogic
@@ -67,7 +69,6 @@ simple_oauth
 six
 stamp
 stringex
-timers
 tinder
 turbolinks
 twitter-stream

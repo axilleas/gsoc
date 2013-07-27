@@ -9,7 +9,6 @@ asciidoctor
 bcrypt-ruby
 bootstrap-sass
 builder
-charlock_holmes
 coffee-rails
 coffee-script
 coffee-script-source
@@ -51,7 +50,6 @@ rake
 rdoc
 redcarpet
 ref
-sanitize
 sass
 sass-rails
 sinatra
@@ -62,6 +60,7 @@ temple
 therubyracer
 thor
 tilt
+timers
 treetop
 tzinfo
 uglifier
