@@ -14,10 +14,11 @@ fi
 
 echo 'Searching Fedora repositories...'
 #reposync --repoid=fedora,updates,updates-testing
-yum search all rubygem | awk '{print $1}' | sort -k1 > $fedora_gems_raw
+#yum search all rubygem | awk '{print $1}' | sort -k1 > $fedora_gems_raw
+repoquery rubygem-* > $fedora_gems_raw
 
 # Striping uneeded symbols and the rubygem- prefix
-sed -e 's/rubygem-//g' -e 's/.noarch//g' -e 's/.x86_64//g' -e '/-doc/d' -e '/i686/d' -e '/-devel/d' -e '/==/d' -e '/:/d' < $fedora_gems_raw > $fedora_gems
+cat $fedora_gems_raw | sed -e 's/rubygem-//g;s/.fc19.noarch//g;s/.fc19.x86_64//g;/-doc/d;/-devel/d;/-debuginfo/d' | awk 'BEGIN { FS=":" }; {print $1}' | sed 's/.\{2\}$//g' > $fedora_gems
 
 echo 'Done!'
 
