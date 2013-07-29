@@ -47,12 +47,10 @@ omniauth-google-oauth2
 omniauth-oauth
 omniauth-oauth2
 omniauth-twitter
-orm_adapter
 posix-spawn
 puma
 pygments.rb
 pyu-ruby-sasl
-redis
 redis-actionpack
 redis-activesupport
 redis-namespace

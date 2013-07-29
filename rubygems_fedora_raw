@@ -387,8 +387,8 @@ rubygem-mongoid-0:3.1.4-1.fc19.noarch
 rubygem-mongoid-doc-0:3.1.4-1.fc19.noarch
 rubygem-moped-0:1.5.0-1.fc19.noarch
 rubygem-moped-doc-0:1.5.0-1.fc19.noarch
-rubygem-multi_json-0:1.7.1-1.fc19.noarch
-rubygem-multi_json-doc-0:1.7.1-1.fc19.noarch
+rubygem-multi_json-0:1.7.7-1.fc19.noarch
+rubygem-multi_json-doc-0:1.7.7-1.fc19.noarch
 rubygem-multi_xml-0:0.5.2-3.fc19.noarch
 rubygem-multi_xml-doc-0:0.5.2-3.fc19.noarch
 rubygem-multipart-0:0.2.1-6.fc19.noarch
@@ -443,6 +443,8 @@ rubygem-openstack-quantum-client-0:0.1.5-6.fc19.noarch
 rubygem-openstack-quantum-client-doc-0:0.1.5-6.fc19.noarch
 rubygem-origin-0:1.1.0-3.fc19.noarch
 rubygem-origin-doc-0:1.1.0-3.fc19.noarch
+rubygem-orm_adapter-0:0.4.0-1.fc19.noarch
+rubygem-orm_adapter-doc-0:0.4.0-1.fc19.noarch
 rubygem-pam-0:1.5.4-15.fc19.x86_64
 rubygem-pango-0:1.2.6-1.fc19.x86_64
 rubygem-pango-devel-0:1.2.6-1.fc19.i686
@@ -536,6 +538,8 @@ rubygem-recaptcha-0:0.3.5-2.fc19.noarch
 rubygem-recaptcha-doc-0:0.3.5-2.fc19.noarch
 rubygem-redcarpet-0:2.1.1-7.fc19.x86_64
 rubygem-redcarpet-doc-0:2.1.1-7.fc19.noarch
+rubygem-redis-0:3.0.4-2.fc19.noarch
+rubygem-redis-doc-0:3.0.4-2.fc19.noarch
 rubygem-ref-0:1.0.0-4.fc19.noarch
 rubygem-ref-doc-0:1.0.0-4.fc19.noarch
 rubygem-regin-0:0.3.8-6.fc19.noarch
@@ -544,8 +548,8 @@ rubygem-rerun-0:0.6.2-6.fc19.noarch
 rubygem-rest-client-0:1.6.7-2.fc19.noarch
 rubygem-restr-0:0.5.0-8.fc19.noarch
 rubygem-reststop-0:0.4.0-8.fc19.noarch
-rubygem-rhc-0:1.10.7-1.fc19.noarch
-rubygem-rhc-doc-0:1.10.7-1.fc19.noarch
+rubygem-rhc-0:1.11.4-1.fc19.noarch
+rubygem-rhc-doc-0:1.11.4-1.fc19.noarch
 rubygem-right_aws-0:2.0.0-7.fc19.noarch
 rubygem-riot-0:0.12.5-4.fc19.noarch
 rubygem-riot-doc-0:0.12.5-4.fc19.noarch

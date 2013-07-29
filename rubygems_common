@@ -34,6 +34,7 @@ multipart-post
 net-ldap
 nokogiri
 oauth
+orm_adapter
 pg
 polyglot
 rack
@@ -49,6 +50,7 @@ raindrops
 rake
 rdoc
 redcarpet
+redis
 ref
 sass
 sass-rails

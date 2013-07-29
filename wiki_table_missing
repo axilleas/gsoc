@@ -21,6 +21,10 @@
 | - 
 | - 
 |-
+|charlock_holmes
+|[https://bugzilla.redhat.com/show_bug.cgi?id=989143 989143]
+|NEW
+|-
 |chosen-rails
 |[https://bugzilla.redhat.com/show_bug.cgi?id=967396 967396]
 |ASSIGNED
@@ -198,8 +202,8 @@
 | - 
 |-
 |orm_adapter
-| - 
-| - 
+|[https://bugzilla.redhat.com/show_bug.cgi?id=988938 988938]
+|NEW
 |-
 |posix-spawn
 | - 
@@ -249,6 +253,10 @@
 | - 
 | - 
 |-
+|sanitize
+|[https://bugzilla.redhat.com/show_bug.cgi?id=989132 989132]
+|ASSIGNED
+|-
 |seed-fu
 | - 
 | - 
@@ -280,10 +288,6 @@
 |stringex
 |[https://bugzilla.redhat.com/show_bug.cgi?id=728051 728051]
 |ASSIGNED
-|-
-|timers
-| - 
-| - 
 |-
 |tinder
 | - 

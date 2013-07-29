@@ -36,9 +36,11 @@ jammit
 log4r
 lumberjack
 memcache-client
+mini_portile
 mobileesp_converted
 mysql2
 ohai
+omniauth
 openshift-origin-auth-kerberos
 openshift-origin-console
 orm_adapter
@@ -52,8 +54,6 @@ ruby-pcap
 ruby-shadow
 rubytree
 rugged
-safe_yaml
-sanitize
 sass-twitter-bootstrap
 serialport
 sfcc

@@ -1,13 +1,11 @@
 mysql2
-redis
-chosen-rails
 faraday
+omniauth
+chosen-rails
 backports
 stringex
-sanitize
 dotenv
 yajl-ruby
 unicorn
 connection_pool
-orm_adapter
 charlock_holmes
