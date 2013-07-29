@@ -332,8 +332,8 @@ def main():
   print 'To be packaged       : ', len(missing_gems)
   print 'Pending review in BZ : ', len(bz_common)
   print 'When BZ go in repos  : ', len(missing_gems) - len(bz_common)
-  print
-  print 'Fedora will have' , round(len(missing_gems)/float(len(fedora))*100,2), '% more ruby packages, that is', len(missing_gems)+len(fedora), 'gems in total.'
+#  print
+#  print 'Fedora will have' , round(len(missing_gems)/float(len(fedora))*100,2), '% more ruby packages, that is', len(missing_gems)+len(fedora), 'gems in total.'
   print '------------------------------------------------------'
   
 if __name__ == '__main__':
