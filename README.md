@@ -12,13 +12,11 @@ Note that it could take some time because it queries both Fedora's repos and rub
 
 ```
 Gitlab runtime gems  :  145
-Gems in Fedora repos :  384
-Common gems          :  68
-To be packaged       :  77
-Pending review in BZ :  10
-When BZ go in repos  :  67
-
-Fedora will have 20.05 % more ruby packages, that is 461 gems in total.
+Gems in Fedora repos :  386
+Common gems          :  69
+To be packaged       :  76
+Pending review in BZ :  11
+When BZ go in repos  :  65
 ```
 
 [gitlab]: https://github.com/gitlabhq/gitlabhq
