@@ -229,6 +229,7 @@ openstack
 openstack-compute
 openstack-quantum-client
 origin
+orm_adapter
 pam
 pango
 paranoia
@@ -276,6 +277,7 @@ rdiscount
 rdoc
 recaptcha
 redcarpet
+redis
 ref
 regin
 rerun
@@ -312,8 +314,11 @@ ruby_parser
 rubyforge
 rubyzip
 rufus-scheduler
+safe_yaml
+sanitize
 sass
 sass-rails
+sass-twitter-bootstrap
 scoped_search
 scruffy
 selenium-webdriver

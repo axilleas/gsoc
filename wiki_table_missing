@@ -1,5 +1,5 @@
 {| class="wikitable" style="text-align: center;" cellpadding="10"
-!colspan=""|GitLab missing gems
+!colspan="3"|GitLab missing gems
 |-
 !Ruby gem
 !Bugzilla id
@@ -20,6 +20,10 @@
 |celluloid
 | - 
 | - 
+|-
+|charlock_holmes
+|[https://bugzilla.redhat.com/show_bug.cgi?id=989143 989143]
+|ASSIGNED
 |-
 |chosen-rails
 |[https://bugzilla.redhat.com/show_bug.cgi?id=967396 967396]
@@ -55,7 +59,7 @@
 |-
 |faraday
 |[https://bugzilla.redhat.com/show_bug.cgi?id=967337 967337]
-|NEW
+|ASSIGNED
 |-
 |faraday_middleware
 | - 
@@ -174,8 +178,8 @@
 | - 
 |-
 |omniauth
-| - 
-| - 
+|[https://bugzilla.redhat.com/show_bug.cgi?id=989775 989775]
+|NEW
 |-
 |omniauth-github
 | - 
@@ -197,10 +201,6 @@
 | - 
 | - 
 |-
-|orm_adapter
-| - 
-| - 
-|-
 |posix-spawn
 | - 
 | - 
@@ -216,10 +216,6 @@
 |pyu-ruby-sasl
 | - 
 | - 
-|-
-|redis
-|[https://bugzilla.redhat.com/show_bug.cgi?id=978284 978284]
-|ASSIGNED
 |-
 |redis-actionpack
 | - 
@@ -280,10 +276,6 @@
 |stringex
 |[https://bugzilla.redhat.com/show_bug.cgi?id=728051 728051]
 |ASSIGNED
-|-
-|timers
-| - 
-| - 
 |-
 |tinder
 | - 
