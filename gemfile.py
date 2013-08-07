@@ -205,7 +205,7 @@ def populate_dicts():
 
   return (gitlab, fedora, upstream)
 
-def all_versions(dicts_tuple):
+def all_versions(dicts):
   '''tuple -> dict
   Returns a dictionary with key the name of the gem and key a list of versions of
   gitlab, fedora and upstream with this order. Run populate_dicts() first.
