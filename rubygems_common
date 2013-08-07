@@ -52,6 +52,7 @@ rdoc
 redcarpet
 redis
 ref
+sanitize
 sass
 sass-rails
 sinatra

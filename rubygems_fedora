@@ -314,8 +314,11 @@ ruby_parser
 rubyforge
 rubyzip
 rufus-scheduler
+safe_yaml
+sanitize
 sass
 sass-rails
+sass-twitter-bootstrap
 scoped_search
 scruffy
 selenium-webdriver
