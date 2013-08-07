@@ -192,11 +192,11 @@ def populate_dicts():
     
   print 'Populating dictionaries, this might take some time.'
   print 'GitLab...'
-  gitlab = gitlab_gems_runtime(gitlab_gems_file)
+  gitlab = dict_of_runtime_gitlab_gems(gitlab_gems_file)
   print 'Searching at Fedora db...'
-  fedora = fedora_gems_rawhide(gitlab_gems_file)
+  fedora = dict_of_fedora_gems_rawhide(gitlab_gems_file)
   print 'Searching at rubygems.org...'
-  upstream = find_upstream_gems(gitlab_gems_file)
+  upstream = dict_of_upstream_gems(gitlab_gems_file)
     
   # Write results to json
   dict_to_json(gitlab, gitlab_json)
