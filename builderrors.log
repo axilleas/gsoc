@@ -1,0 +1,68 @@
+# Overview
+
+Build for Fedora 19 all gitlab gems with its fixed dependencies?, skipping tests
+where difficult to run and put them in a public repo.
+
+## Crappy stoppers
+
+Gems gitlab < fedora (hard, will have to test if work)
+
+
+Gems gitlab > fedora (easy if gitlab == upstream then ask maintainer to update, hard if gitlab < upstream then ask? maintainer to update)
+
+
+# Workflow
+
+1. Check in table what's missing, build next gem in line.
+2. First run rpmbuild, check what fails, keep track what gets built, then build in mock.
+3. Copy mockbuilds in ~/repo/gitlab/fedora-19/
+4. Make f19 git branch in ~/git/fedora/packages/
+5. mkdir gemname in ~/git/fedora/packages, copy SPECs and commit with message below
+
+------
+
+Track what gets built:
+
+act-as-taggable     : version 2.4.1 ok, test need download, no test run
+backports           : version 3.3.3 (gitlab 3.3.2 test and request upstream update), no test run, where to put dirs
+carrierwave         : version 0.9 (gitlab 0.8), license/test need download, 
+celluloid           : version 0.14.1  ok, license need download, spec/ does not include all needed files
+chosen-rails        : version 1.0.0 (gitlab 0.9.8, 2 years ago) latest version needs extra dep (compass-rails)
+(compass-rails)     : required by chosen-rails-1.0.0, no test run
+connection_pool     : version 1.1.0  ok, test fail
+d3_rails            : version 3.2.8 (gitlab 3.1.10), no test included, app dir should be considered as vendor/?
+descendants_tracker : version 0.0.1  ok, test fail
+devise              : version 3.0.1 (gitlab 2.2.4), needs warden 1.2.3 (f19 1.2.1), needs thread_safe (not packaged)
+(thread_safe)       : required by devise-3.0.1, test fail (see below)
+devise 2.2.5        : version 2.2.5 (gitlab 2.2.4 test and request upstream update), tests need multi_json-1.7.2
+enumerize           : version 0.6.1 ok, test fail
+escape_utils        : version 0.3.2 (gitlab 0.2.4), test pass
+faraday             : version 0.8.8 (gitlab 0.8.7 test and request upstream update), test pass
+faraday_middleware  : version 0.9.0  ok,
+font-awesome-rails  : version 3.2.1.2 ok, test fail
+foreman             : version 0.63.0 ok, license need download, test fail need unpackaged gems
+gemoji              : version 1.4.0 (gitlab 1.2.1 test and request upstream update), license need download and clarification in spec
+github-linguist     : version 2.8.12 (gitlab 2.3.4), 
+
+
+
+
+%check
+pushd .%{gem_instdir}
+rspec spec/
+popd
+
+
+
+
+
+
+
+
+
+
+thread_safe test error:
+[66/68] TestHash#test_concurrency/home/axil/rpmbuild/BUILD/thread_safe-0.1.2/usr/share/gems/gems/thread_safe-0.1.2/test/test_hash.rb:11:in `[]=': can't add a new key into hash during iteration (RuntimeError)
+        from /home/axil/rpmbuild/BUILD/thread_safe-0.1.2/usr/share/gems/gems/thread_safe-0.1.2/test/test_hash.rb:11:in `block (4 levels) in test_concurrency'
+        from /home/axil/rpmbuild/BUILD/thread_safe-0.1.2/usr/share/gems/gems/thread_safe-0.1.2/test/test_hash.rb:10:in `times'
+        from /home/axil/rpmbuild/BUILD/thread_safe-0.1.2/usr/share/gems/gems/thread_safe-0.1.2/test/test_hash.rb:10:in `block (3 levels) in test_concurrency'
