@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+fasLogin=axilleas
+repoLocalDir=~/repos
+repoName=gitlab
+declare -a branch=(fedora-19 fedora-rawhide)
+declare -a rpmdir=(i386 x86_64 noarch SRPMS)
+declare -a rsyncParam=(-avr --delete)
+
+pushd .
+
+cd $repoLocalDir/$repoName
+for dir in "${branch[@]}"
+do
+    echo -e "\033[31mUpdate $dir repos:\033[0m"
+    cd $dir
+    for dir2 in "${rpmdir[@]}"
+    do
+        echo -e "\033[34m\t* $dir2:\033[0m"
+        cd $dir2
+        createrepo ./
+        rsync "${rsyncParam[@]}" ./* $fasLogin@fedorapeople.org:/srv/repos/$fasLogin/$repoName/$dir/$dir2
+        cd ..
+    done
+    cd ..
+done
+
+popd

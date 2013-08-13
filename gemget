@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+gem='$1'
+
+spec_dir=$HOME/rpmbuild/SPECS
+rpm_dir=$HOME/rpmbuild/RPMS
+srpm_dir=$HOME/rpmbuild/SRPMS
+src_dir=$HOME/rpmbuild/SOURCES
+
+pushd . >& /dev/null
+
+cd $src_dir
+
+echo "Fetching $1 from rubygems.org"
+gem2rpm --fetch $1 -o $spec_dir/rubygem-$1.spec
+echo "gem downloaded in : $src_dir"
+echo "spec file is in   : $spec_dir"
+
+popd >& /dev/null
