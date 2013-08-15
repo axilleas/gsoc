@@ -10,7 +10,7 @@ import pkgwat.api
 
 # Declare files
 
-gitlab_gems_file = os.path.realpath('gitlab54-gems')
+gitlab_gems_file = os.path.realpath('gitlab6-gems')
 rubygems_fedora = os.path.realpath('rubygems_fedora')
 rubygems_gitlab = os.path.realpath('rubygems_gitlab')
 rubygems_missing = os.path.realpath('rubygems_missing')
@@ -45,7 +45,7 @@ def list_of_all_gitlab_gems():
   for line in gems:
     if line.startswith('  '):
       gitlab_gemlist.add(line.split()[0])
-  
+
   return sorted(gitlab_gemlist)
 
 
@@ -61,7 +61,7 @@ def dict_of_runtime_gitlab_gems(gitlab_list):
       name = '-'.join(line.split('-')[:-1])
       version = line.split('-')[-1].strip('\n')
       gitlab_dict[name] = version
-  
+
   return gitlab_dict
 
 
@@ -69,7 +69,7 @@ def dict_of_fedora_gems_rawhide(filename):
   '''file -> dictionary
 
   Returns a list of rubygems currently packaged in Fedora.
-  
+
   Note: Input as a filename the one with gitlab gems in it (eg. gitlab53-gems).
   '''
   fedora_dict = {}
@@ -82,17 +82,17 @@ def dict_of_fedora_gems_rawhide(filename):
     fedora_dict[gem] = version
 
   return fedora_dict
-  
+
 
 def dict_of_upstream_gems(gitlab_list):
   '''file -> dict
-  
+
   Returns a dictionary of a list of gems.
   Note: Input as a filename the one with gitlab gems in it (eg. gitlab53-gems).
   '''
   upstream_dict = {}
   gl_list = dict_of_runtime_gitlab_gems(gitlab_list).keys()
-  
+
   for gem in gl_list:
     url = 'https://rubygems.org/api/v1/gems/%s.json' % gem
     js = json.load(urllib2.urlopen(url))
@@ -110,16 +110,16 @@ def find_common(gitlab_gemlist, fedora_gemlist):
   >>> common_gems(['sinatra', 'sidekiq', 'sass_rails', 'sass'],['sass', 'rspec', 'sass_rails'])
   set(['sass_rails', 'sass'])
   '''
-  
+
   return sorted(set(gitlab_gemlist) & set(fedora_gemlist))
 
 
 def find_missing(gitlab_gems, common_gems):
   '''lists -> list
-  
+
   Returns a list with duplicate items removed. It searches the first list
   and if an item is not in the second list it is added to the new list.
-  
+
   >>> find_missing([1, 2, 3, 4, 5], [2, 4])
   [1, 3, 5]
   '''
@@ -134,7 +134,7 @@ def find_missing(gitlab_gems, common_gems):
 def single_gem_dependencies(gem_name):
   '''List dependencies of a gem
   '''
-  
+
   url = 'https://rubygems.org/api/v1/gems/%s.json' % gem_name
   js = json.load(urllib2.urlopen(url))
   deps = js['dependencies']
@@ -146,15 +146,15 @@ def single_gem_dependencies(gem_name):
 
 def dict_of_bugzilla_gems(rubygems_bugzilla_raw):
   '''file -> dict
-  
-  Returns a dictionary with rubygems pending review for Fedora 
+
+  Returns a dictionary with rubygems pending review for Fedora
   and their status.
   '''
-  
+
   bz_dict = {}
   with open(rubygems_bugzilla_raw, 'r') as f:
     for line in f.readlines():
-  
+
       split_line = re.split(' - ', line)
       strip_rubygem = re.search(r'rubygem-[\w-]+', line).group()
       gem_name = re.sub('rubygem-', '', strip_rubygem)
@@ -168,7 +168,7 @@ def dict_of_bugzilla_gems(rubygems_bugzilla_raw):
 
 
 def created_before_than(filename, days_ago):
-  
+
   now = time.time()
   file_creation = os.path.getctime(filename)
   time_ago = now - days_ago * 60 * 60 * 24
@@ -178,7 +178,7 @@ def created_before_than(filename, days_ago):
 def dict_to_json(dictionary, json_name):
   ''' dict -> file
   Convert a given dictionary to json and save it in a file named:
-  json_name. You must complete the .json yourself. 
+  json_name. You must complete the .json yourself.
   '''
   with open(json_name, 'w') as j:
     j.write(json.dumps(dictionary))
@@ -186,10 +186,10 @@ def dict_to_json(dictionary, json_name):
 
 def populate_dicts():
   '''
-  Returns a tuple with populated dictionaries in this order: 
+  Returns a tuple with populated dictionaries in this order:
   gitlab, fedora, upstream, all
   '''
-    
+
   print 'Populating dictionaries, this might take some time.'
   print 'GitLab...'
   gitlab = dict_of_runtime_gitlab_gems(gitlab_gems_file)
@@ -197,7 +197,7 @@ def populate_dicts():
   fedora = dict_of_fedora_gems_rawhide(gitlab_gems_file)
   print 'Searching at rubygems.org...'
   upstream = dict_of_upstream_gems(gitlab_gems_file)
-    
+
   # Write results to json
   dict_to_json(gitlab, gitlab_json)
   dict_to_json(fedora, fedora_json)
@@ -217,7 +217,7 @@ def all_versions(dicts):
   versions = {}
   for gem in dicts[0].keys():
     versions[gem] = [dicts[0][gem], dicts[1][gem], dicts[2][gem]]
- 
+
   return versions
 
 def wiki_versions_table():
@@ -254,9 +254,9 @@ def wiki_missing_table():
   Writes to a file the missing gems in a Wiki table.
   Results go in https://fedoraproject.org/wiki/User:Axilleas/GitLab#Missing_gems
   '''
-  
+
   gitlab = dict_of_runtime_gitlab_gems(gitlab_gems_file)
-  
+
   fedora = []
   with open(rubygems_fedora,'r') as f:
     for gem in f.readlines():
@@ -264,13 +264,13 @@ def wiki_missing_table():
 
   common = find_common(gitlab.keys(), fedora)
   missing_gems = find_missing(gitlab.keys(), common)
-  
+
   bz = dict_of_bugzilla_gems(gems_bugzilla)
   bz_common = []
   for gem in bz.keys():
     if gem in missing_gems:
       bz_common.append(gem)
-   
+
   if os.path.isfile(missing_table):
     os.remove(missing_table)
 
@@ -290,13 +290,13 @@ def wiki_missing_table():
         f.write('|-' + '\n' + '|' + gem + '\n' + \
             '| - \n' + \
             '| - \n')
-      
+
     f.write('|}')
 
 def main():
-  
+
   gitlab = dict_of_runtime_gitlab_gems(gitlab_gems_file)
-  
+
   # All Fedora gem packages that are in repos as list
   fedora = []
   with open(rubygems_fedora,'r') as f:
@@ -306,17 +306,17 @@ def main():
   with open(rubygems_gitlab, 'w') as f:
     for gem in gitlab.keys():
       f.write(gem + '\n')
-  
+
   common = find_common(gitlab.keys(), fedora)
   with open(rubygems_common, 'w') as f:
     for gem in common:
       f.write(gem + '\n')
-  
+
   missing_gems = find_missing(gitlab.keys(), common)
   with open(rubygems_missing, 'w') as f:
     for gem in missing_gems:
       f.write(gem + '\n')
- 
+
   bz = dict_of_bugzilla_gems(gems_bugzilla)
   bz_common = []
   for gem in bz.keys():
@@ -326,7 +326,7 @@ def main():
   with open(gems_bugzilla_common, 'w') as f:
     for gem in bz_common:
       f.write(gem + '\n')
-  
+
   print '------------------------------------------------------'
   print 'Gitlab runtime gems  : ', len(gitlab.keys())
   print 'Gems in Fedora repos : ', len(fedora)
@@ -337,6 +337,6 @@ def main():
  # print
  # print 'Fedora will have' , round(len(missing_gems)/float(len(fedora))*100,2), '% more ruby packages, that is', len(missing_gems)+len(fedora), 'gems in total.'
   print '------------------------------------------------------'
-  
+
 if __name__ == '__main__':
   main()
