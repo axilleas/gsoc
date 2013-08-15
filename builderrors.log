@@ -32,7 +32,7 @@ chosen-rails            : 1.0.0 (gitlab 0.9.8, 2 years ago) latest version needs
 connection_pool         : 1.1.0  ok, test fail
 d3_rails                : 3.2.8 (gitlab 3.1.10), no test included, app dir should be considered as vendor/?
 descendants_tracker     : 0.0.1  ok, test fail
-devise                  : 3.0.1 (gitlab 2.2.4), needs warden 1.2.3 (f19 1.2.1), needs thread_safe (not packaged)
+devise                  : 3.0.1 (gitlab 2.2.5), needs warden 1.2.3 (f19 1.2.1), needs thread_safe
 (thread_safe)           : required by devise-3.0.1, test fail (see below)
 devise 2.2.5            : 2.2.5 ok, tests need multi_json-1.7.2
 enumerize               : 0.6.1 ok, test fail
@@ -90,18 +90,25 @@ rubyntlm                : 0.3.3 (gitlab 0.1.1), missing license (https://github.
 seed-fu                 : 2.2.0 ok, test not included (request upstream)
 select2-rails           : 3.4.7 (gitlab 3.4.2 test and request update), missing license file (report upstream), 
 settingslogic           : 2.0.9 ok, test pass, ready for submission to BZ
+sidekiq                 : 2.13.0 (gitlab 2.12.4 test and request update), some test fail
+simple_oauth            : 0.2.0 (gitlab 0.1.9 test and request update), some test fail
+six                     : 0.2.0 ok, doesn't ship with license/tests
+stamp                   : 0.5.0 ok, test pass, ready for sumbission in BZ
+stringex                : 2.0.8 (gitlab 1.5.1), test fail
+tinder                  : 1.9.2 ok, test fail
+twitter-stream          : 0.1.16 ok, test pass, ready for sumbission in BZ
+underscore-rails        : 1.5.1 (gitlab 1.4.4), license file not included (https://github.com/rweng/underscore-rails/issues/19)
+unicorn                 : 4.6.3 ok, some tests fail
 
-sidekiq                 : 2.13.0 (gitlab 2.12.4 est and request update), 
-simple_oauth            : 0.1.9 	None 	0.2.0 
-six                     : 0.2.0 ok, 
-stamp                   : 0.5.0 ok, 
-stringex                : 1.5.1 	None 	2.0.8 
-tinder                  : 1.9.2 ok, 
-twitter-stream          : 0.1.16 ok, 
-underscore-rails        : 1.4.4 	None 	1.5.1
-unicorn                 : 4.6.3 ok, 
 libv8                   : 3.16.14.1 (gitlab 3.11.8.17), missing license file (report upstream), 
 
+
+   /usr/share/gems/gems/gitlab-gollum-lib-1.0.1/Gemfile
+   /usr/share/gems/gems/gitlab-gollum-lib-1.0.1/HISTORY.md
+   /usr/share/gems/gems/gitlab-gollum-lib-1.0.1/Rakefile
+   /usr/share/gems/gems/gitlab-gollum-lib-1.0.1/docs/sanitization.md
+   /usr/share/gems/gems/gitlab-gollum-lib-1.0.1/gollum-lib.gemspec
+   /usr/share/gems/gems/gitlab-gollum-lib-1.0.1/licenses/licenses.txt
 
 
 
