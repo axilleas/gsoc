@@ -11,7 +11,7 @@ Gems gitlab < fedora (hard, will have to test if work)
 Gems gitlab > fedora (easy if gitlab == upstream then ask maintainer to update, hard if gitlab < upstream then ask? maintainer to update)
 
 
-# Workflow
+## Workflow
 
 1. Check in table what's missing, build next gem in line.
 2. First run rpmbuild, check what fails, keep track what gets built, then build in mock.
@@ -21,8 +21,8 @@ Gems gitlab > fedora (easy if gitlab == upstream then ask maintainer to update, 
 
 ------
 
-Track what gets built:
-
+###Track what gets built:
+```
 act-as-taggable         : 2.4.1 ok, test need download, no test run
 backports               : 3.3.3 (gitlab 3.3.2 test and request upstream update), no test run, where to put dirs
 carrierwave             : 0.9 (gitlab 0.8), license/test need download, 
@@ -45,13 +45,6 @@ gemoji                  : 1.4.0 (gitlab 1.2.1 test and request gitlab update), l
 github-linguist         : 2.8.12 (gitlab 2.3.4), no test/license is shipped
 github-markdown         : 0.5.3 ok, no license is shipped, test fail
 github-markup           : 0.7.5 ok, test fail
-gitlab-gollum-lib       : 
-gitlab-grack            : 
-gitlab-grit             : 
-gitlab-pygments.rb      : 
-gitlab_git              : 
-gitlab_meta             : 
-gitlab_omniauth-ldap    : 
 gon                     : 4.1.1 ok, license not present as a file, test fail due to unpackaged gems (rabl, rabl-rails, jbuilder)
 grape                   : 0.5.0 (gitlab 0.4.1), test need unpackaged gems (see Gemfile)
 virtus                  : 0.5.5 ok, required by grape, test pass (1 pending)
@@ -101,16 +94,74 @@ underscore-rails        : 1.5.1 (gitlab 1.4.4), license file not included (https
 unicorn                 : 4.6.3 ok, some tests fail
 
 libv8                   : 3.16.14.1 (gitlab 3.11.8.17), missing license file (report upstream), 
+```
+------------------------
+
+### GitLab gems - discuss how to handle packaging on forks
+
+#### gitlab-grit (https://github.com/gitlabhq/grit)
+
+All other forks depend on this. Upstream is idle for too long with many 
+PRs and bugs not addressed. Seems thei main concern is now rugged, a replacement 
+of grit. That is the main reason GitLab went on a fork (the plan is to switch from 
+grit to rugged once the latter gets all the needed functionality, likely won't happen in another year or so).
+See upstream grit sparse commits[0] and sumbitted issues[1].
+
+[0] https://github.com/mojombo/grit/commits/master
+[1] https://github.com/mojombo/grit/issues
+
+#### gitlab-gollum-lib (https://github.com/gitlabhq/gollum-lib)
+
+Upstream is v1.0.6, gitlab uses upstream's v1.0.0 and have released a 1.0.1 version with changes: 
+1) s/grit/gitlab-grit in gemspec deps
+2) rename gem name to gitlab-gollum-lib
+
+Compare: https://github.com/gitlabhq/gollum-lib/commits/gitlab-gollum-lib with https://github.com/gollum/gollum-lib/commits/v1.0.0
 
 
-   /usr/share/gems/gems/gitlab-gollum-lib-1.0.1/Gemfile
-   /usr/share/gems/gems/gitlab-gollum-lib-1.0.1/HISTORY.md
-   /usr/share/gems/gems/gitlab-gollum-lib-1.0.1/Rakefile
-   /usr/share/gems/gems/gitlab-gollum-lib-1.0.1/docs/sanitization.md
-   /usr/share/gems/gems/gitlab-gollum-lib-1.0.1/gollum-lib.gemspec
-   /usr/share/gems/gems/gitlab-gollum-lib-1.0.1/licenses/licenses.txt
+#### gitlab-grack (https://github.com/gitlabhq/grack)
+
+Upstream was idle for some time (2 commits in 2011, 4 in 2012) and it seems GitLab
+picked it off the 2010 codebase and went on to release a 1.0.1 version two months ago.
+It seems that now there has been added another person to the upstream grack team
+and been pushing some code recently. As ar as I know gitlab hasn't approached upstream
+for their changes.
+
+#### gitlab-pygments.rb (https://github.com/gitlabhq/pygments.rb)
+
+As already discussed, there is a pending PR [0] to be merged upstream and finally drop
+the fork.
+
+[0] https://github.com/tmm1/pygments.rb/pull/77
 
 
+#### gitlab_git (https://github.com/gitlabhq/gitlab_git)
+
+Wrapper around gitlab-grit. Not a fork but depends on gitlab-grit.
+
+
+#### gitlab_omniauth-ldap (https://github.com/gitlabhq/omniauth-ldap)
+
+4 significant changes from upstream:
+
+1) GitLab fork is missing the commits upstream made on 27 Sep 2012 [0]
+2) GitLab fork update net-ldap to fix LDAP authentication issues [1]
+3) GitLab fork fix ldap blank password [2]
+4) GitLab fork fix some failing tests [3]
+
+[0] Compare: https://github.com/intridea/omniauth-ldap/commits/master with https://github.com/gitlabhq/omniauth-ldap/commits/master
+[1] https://github.com/gitlabhq/omniauth-ldap/commit/8c50f199f8e2d8a4dc901ddbbe3e37a2630843ac
+[2] https://github.com/gitlabhq/omniauth-ldap/commit/536c321236702dd9b759831f8ce5f2bc250d43b0
+[3] https://github.com/gitlabhq/omniauth-ldap/commit/d92ef39dcd9a392fe458ca868e9ba2a501b11881
+
+#### gitlab_meta
+
+Doesn't need to be packaged, it only counts the number it gets downloaded from rubygems.org
+
+
+-----------------------------------
+
+### Template
 
 %doc %{gem_instdir}/LICENSE
 %exclude %{gem_instdir}/.*
@@ -135,12 +186,3 @@ BuildRequires: rubygem(rspec)
 BuildRequires: rubygem(minitest)
 BuildRequires: rubygem(mocha)
 
-
-
-
-
-thread_safe test error:
-[66/68] TestHash#test_concurrency/home/axil/rpmbuild/BUILD/thread_safe-0.1.2/usr/share/gems/gems/thread_safe-0.1.2/test/test_hash.rb:11:in `[]=': can't add a new key into hash during iteration (RuntimeError)
-        from /home/axil/rpmbuild/BUILD/thread_safe-0.1.2/usr/share/gems/gems/thread_safe-0.1.2/test/test_hash.rb:11:in `block (4 levels) in test_concurrency'
-        from /home/axil/rpmbuild/BUILD/thread_safe-0.1.2/usr/share/gems/gems/thread_safe-0.1.2/test/test_hash.rb:10:in `times'
-        from /home/axil/rpmbuild/BUILD/thread_safe-0.1.2/usr/share/gems/gems/thread_safe-0.1.2/test/test_hash.rb:10:in `block (3 levels) in test_concurrency'
