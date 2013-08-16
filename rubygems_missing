@@ -40,6 +40,7 @@ kaminari
 libv8
 modernizr
 mysql2
+newrelic_rpm
 oauth2
 omniauth
 omniauth-github

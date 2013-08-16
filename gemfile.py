@@ -327,7 +327,7 @@ def main():
     for gem in bz_common:
       f.write(gem + '\n')
 
-  print '------------------------------------------------------'
+  print '---------------------------------'
   print 'Gitlab runtime gems  : ', len(gitlab.keys())
   print 'Gems in Fedora repos : ', len(fedora)
   print 'Common gems          : ', len(common)
@@ -336,7 +336,7 @@ def main():
   print 'When BZ go in repos  : ', len(missing_gems) - len(bz_common)
  # print
  # print 'Fedora will have' , round(len(missing_gems)/float(len(fedora))*100,2), '% more ruby packages, that is', len(missing_gems)+len(fedora), 'gems in total.'
-  print '------------------------------------------------------'
+  print '----------------------------------'
 
 if __name__ == '__main__':
   main()

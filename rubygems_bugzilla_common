@@ -5,7 +5,6 @@ chosen-rails
 backports
 stringex
 dotenv
-charlock_holmes
 yajl-ruby
 unicorn
 connection_pool

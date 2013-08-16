@@ -22,8 +22,8 @@
 | - 
 |-
 |charlock_holmes
-|[https://bugzilla.redhat.com/show_bug.cgi?id=989143 989143]
-|ASSIGNED
+| - 
+| - 
 |-
 |chosen-rails
 |[https://bugzilla.redhat.com/show_bug.cgi?id=967396 967396]
@@ -173,6 +173,10 @@
 |[https://bugzilla.redhat.com/show_bug.cgi?id=974889 974889]
 |ASSIGNED
 |-
+|newrelic_rpm
+| - 
+| - 
+|-
 |oauth2
 | - 
 | - 
@@ -200,10 +204,6 @@
 |omniauth-twitter
 | - 
 | - 
-|-
-|orm_adapter
-|[https://bugzilla.redhat.com/show_bug.cgi?id=988938 988938]
-|NEW
 |-
 |posix-spawn
 | - 
@@ -248,10 +248,6 @@
 |rubyntlm
 | - 
 | - 
-|-
-|sanitize
-|[https://bugzilla.redhat.com/show_bug.cgi?id=989132 989132]
-|ASSIGNED
 |-
 |seed-fu
 | - 
