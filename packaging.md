@@ -15,9 +15,9 @@ Gems gitlab > fedora (easy if gitlab == upstream then ask maintainer to update, 
 
 1. Check in table what's missing, build next gem in line.
 2. First run rpmbuild, check what fails, keep track what gets built, then build in mock.
-3. Copy mockbuilds in ~/repo/gitlab/fedora-19/
-4. Make f19 git branch in ~/git/fedora/packages/
-5. mkdir gemname in ~/git/fedora/packages, copy SPECs and commit with message below
+3. Copy mockbuilds in `~/repo/gitlab/fedora-19/`
+4. Make f19 git branch in `~/git/fedora/packages/`
+5. mkdir gemname in `~/git/fedora/packages`, copy SPECs and commit with below messages.
 
 ------
 
@@ -105,10 +105,7 @@ All other forks depend on this. Upstream is idle for too long with many
 PRs and bugs not addressed. Seems thei main concern is now rugged, a replacement 
 of grit. That is the main reason GitLab went on a fork (the plan is to switch from 
 grit to rugged once the latter gets all the needed functionality, likely won't happen in another year or so).
-See upstream grit sparse commits[0] and sumbitted issues[1].
-
-[0] https://github.com/mojombo/grit/commits/master
-[1] https://github.com/mojombo/grit/issues
+See upstream grit [sparse commits](https://github.com/mojombo/grit/commits/master) and sumbitted [issues](https://github.com/mojombo/grit/issues).
 
 #### gitlab-gollum-lib (https://github.com/gitlabhq/gollum-lib)
 
@@ -129,30 +126,23 @@ for their changes.
 
 #### gitlab-pygments.rb (https://github.com/gitlabhq/pygments.rb)
 
-As already discussed, there is a pending PR [0] to be merged upstream and finally drop
-the fork.
-
-[0] https://github.com/tmm1/pygments.rb/pull/77
-
+As already discussed, there is a [pending PR](https://github.com/tmm1/pygments.rb/pull/77)
+to be merged upstream and finally drop the fork. 
 
 #### gitlab_git (https://github.com/gitlabhq/gitlab_git)
 
 Wrapper around gitlab-grit. Not a fork but depends on gitlab-grit.
-
 
 #### gitlab_omniauth-ldap (https://github.com/gitlabhq/omniauth-ldap)
 
 4 significant changes from upstream:
 
 1) GitLab fork is missing the commits upstream made on 27 Sep 2012 [0]
-2) GitLab fork update net-ldap to fix LDAP authentication issues [1]
-3) GitLab fork fix ldap blank password [2]
-4) GitLab fork fix some failing tests [3]
+2) GitLab fork [update net-ldap to fix LDAP authentication issues](https://github.com/gitlabhq/omniauth-ldap/commit/8c50f199f8e2d8a4dc901ddbbe3e37a2630843ac)
+3) GitLab fork [fix ldap blank password](https://github.com/gitlabhq/omniauth-ldap/commit/536c321236702dd9b759831f8ce5f2bc250d43b0)
+4) GitLab fork [fix some failing tests](https://github.com/gitlabhq/omniauth-ldap/commit/d92ef39dcd9a392fe458ca868e9ba2a501b11881)
 
 [0] Compare: https://github.com/intridea/omniauth-ldap/commits/master with https://github.com/gitlabhq/omniauth-ldap/commits/master
-[1] https://github.com/gitlabhq/omniauth-ldap/commit/8c50f199f8e2d8a4dc901ddbbe3e37a2630843ac
-[2] https://github.com/gitlabhq/omniauth-ldap/commit/536c321236702dd9b759831f8ce5f2bc250d43b0
-[3] https://github.com/gitlabhq/omniauth-ldap/commit/d92ef39dcd9a392fe458ca868e9ba2a501b11881
 
 #### gitlab_meta
 
