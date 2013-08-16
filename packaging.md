@@ -1,7 +1,7 @@
 # Overview
 
 Build for Fedora 19 all gitlab gems with its fixed dependencies?, skipping tests
-where difficult to run and put them in a public repo.
+where difficult to run and put them in a public [repo](http://repos.fedorapeople.org/repos/axilleas/gitlab/fedora-19/).
 
 ## Crappy stoppers
 
@@ -13,7 +13,7 @@ Gems gitlab > fedora (easy if gitlab == upstream then ask maintainer to update, 
 
 ## Workflow
 
-1. Check in table what's missing, build next gem in line.
+1. Check in [table](https://fedoraproject.org/wiki/User:Axilleas/GitLab#Packages) what's missing, build next gem in line.
 2. First run rpmbuild, check what fails, keep track what gets built, then build in mock.
 3. Copy mockbuilds in `~/repo/gitlab/fedora-19/`
 4. Make f19 git branch in `~/git/fedora/packages/`
