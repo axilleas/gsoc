@@ -1,14 +1,13 @@
-# Overview
+## Overview
 
 Build for Fedora 19 all gitlab gems with its fixed dependencies?, skipping tests
 where difficult to run and put them in a public [repo](http://repos.fedorapeople.org/repos/axilleas/gitlab/fedora-19/).
 
 ## Crappy stoppers
 
-Gems gitlab < fedora (hard, will have to test if work)
+* Gems gitlab < fedora (hard, will have to test if work)
 
-
-Gems gitlab > fedora (easy if gitlab == upstream then ask maintainer to update, hard if gitlab < upstream then ask? maintainer to update)
+* Gems gitlab > fedora (easy if gitlab == upstream then ask maintainer to update, hard if gitlab < upstream then ask? maintainer to update)
 
 
 ## Workflow
@@ -102,7 +101,7 @@ rappael-rails           : 2.1.1 (gitlab git v2.1.0)
 
 ------------------------
 
-### GitLab gems - discuss how to handle packaging on forks
+### Gem packaging on GitLab forks
 
 #### gitlab-grit (https://github.com/gitlabhq/grit)
 
