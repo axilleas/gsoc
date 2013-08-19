@@ -103,24 +103,25 @@ rappael-rails           : 2.1.1 (gitlab git v2.1.0)
 
 ### Gem packaging on GitLab forks
 
-#### gitlab-grit (https://github.com/gitlabhq/grit)
+#### [gitlab-grit](https://github.com/gitlabhq/grit)
 
 All other forks depend on this. Upstream is idle for too long with many 
-PRs and bugs not addressed. Seems thei main concern is now rugged, a replacement 
+PRs and bugs not addressed. Seems their main concern is now rugged, a replacement 
 of grit. That is the main reason GitLab went on a fork (the plan is to switch from 
 grit to rugged once the latter gets all the needed functionality, likely won't happen in another year or so).
 See upstream grit [sparse commits](https://github.com/mojombo/grit/commits/master) and sumbitted [issues](https://github.com/mojombo/grit/issues).
 
-#### gitlab-gollum-lib (https://github.com/gitlabhq/gollum-lib)
+#### [gitlab-gollum-lib](https://github.com/gitlabhq/gollum-lib)
 
-Upstream is v1.0.6, gitlab uses upstream's v1.0.0 and have released a 1.0.1 version with changes: 
-1) s/grit/gitlab-grit in gemspec deps
-2) rename gem name to gitlab-gollum-lib
+Upstream is `v1.0.6`, gitlab uses upstream's `v1.0.0` and have released a `1.0.1` version with changes:
+
+1. `s/grit/gitlab-grit` in gemspec deps
+2. rename gem name to gitlab-gollum-lib
 
 Compare: https://github.com/gitlabhq/gollum-lib/commits/gitlab-gollum-lib with https://github.com/gollum/gollum-lib/commits/v1.0.0
 
 
-#### gitlab-grack (https://github.com/gitlabhq/grack)
+#### [gitlab-grack](https://github.com/gitlabhq/grack)
 
 Upstream was idle for some time (2 commits in 2011, 4 in 2012) and it seems GitLab
 picked it off the 2010 codebase and went on to release a 1.0.1 version two months ago.
@@ -128,16 +129,16 @@ It seems that now there has been added another person to the upstream grack team
 and been pushing some code recently. As ar as I know gitlab hasn't approached upstream
 for their changes.
 
-#### gitlab-pygments.rb (https://github.com/gitlabhq/pygments.rb)
+#### [gitlab-pygments.rb](https://github.com/gitlabhq/pygments.rb)
 
 As already discussed, there is a [pending PR](https://github.com/tmm1/pygments.rb/pull/77)
 to be merged upstream and finally drop the fork. 
 
-#### gitlab_git (https://github.com/gitlabhq/gitlab_git)
+#### [gitlab_git](https://github.com/gitlabhq/gitlab_git)
 
 Wrapper around gitlab-grit. Not a fork but depends on gitlab-grit.
 
-#### gitlab_omniauth-ldap (https://github.com/gitlabhq/omniauth-ldap)
+#### [gitlab_omniauth-ldap](https://github.com/gitlabhq/omniauth-ldap)
 
 4 significant changes from upstream:
 
