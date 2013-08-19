@@ -142,10 +142,10 @@ Wrapper around gitlab-grit. Not a fork but depends on gitlab-grit.
 
 4 significant changes from upstream:
 
-1) GitLab fork is missing the commits upstream made on 27 Sep 2012 [0]
-2) GitLab fork [update net-ldap to fix LDAP authentication issues](https://github.com/gitlabhq/omniauth-ldap/commit/8c50f199f8e2d8a4dc901ddbbe3e37a2630843ac)
-3) GitLab fork [fix ldap blank password](https://github.com/gitlabhq/omniauth-ldap/commit/536c321236702dd9b759831f8ce5f2bc250d43b0)
-4) GitLab fork [fix some failing tests](https://github.com/gitlabhq/omniauth-ldap/commit/d92ef39dcd9a392fe458ca868e9ba2a501b11881)
+1. GitLab fork is missing the commits upstream made on 27 Sep 2012 [0]
+2. GitLab fork [update net-ldap to fix LDAP authentication issues](https://github.com/gitlabhq/omniauth-ldap/commit/8c50f199f8e2d8a4dc901ddbbe3e37a2630843ac)
+3. GitLab fork [fix ldap blank password](https://github.com/gitlabhq/omniauth-ldap/commit/536c321236702dd9b759831f8ce5f2bc250d43b0)
+4. GitLab fork [fix some failing tests](https://github.com/gitlabhq/omniauth-ldap/commit/d92ef39dcd9a392fe458ca868e9ba2a501b11881)
 
 [0] Compare: https://github.com/intridea/omniauth-ldap/commits/master with https://github.com/gitlabhq/omniauth-ldap/commits/master
 
