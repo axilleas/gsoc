@@ -94,7 +94,12 @@ underscore-rails        : 1.5.1 (gitlab 1.4.4), license file not included (https
 unicorn                 : 4.6.3 ok, some tests fail
 
 libv8                   : 3.16.14.1 (gitlab 3.11.8.17), missing license file (report upstream), 
+
+rappael-rails           : 2.1.1 (gitlab git v2.1.0)
+
 ```
+
+
 ------------------------
 
 ### GitLab gems - discuss how to handle packaging on forks
@@ -151,8 +156,9 @@ Doesn't need to be packaged, it only counts the number it gets downloaded from r
 
 -----------------------------------
 
-### Template
+### Macros for Fedora spec
 
+```
 %doc %{gem_instdir}/LICENSE
 %exclude %{gem_instdir}/.*
 
@@ -175,4 +181,4 @@ BuildRequires: rubygem(test-unit)
 BuildRequires: rubygem(rspec)
 BuildRequires: rubygem(minitest)
 BuildRequires: rubygem(mocha)
-
+```
