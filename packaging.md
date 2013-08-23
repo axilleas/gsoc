@@ -20,6 +20,8 @@ where difficult to run and put them in a public [repo](http://repos.fedorapeople
 
 ------
 
+
+
 ###Track what gets built:
 ```
 act-as-taggable         : 2.4.1 ok, test need download, no test run
@@ -94,10 +96,45 @@ unicorn                 : 4.6.3 ok, some tests fail
 
 libv8                   : 3.16.14.1 (gitlab 3.11.8.17), missing license file (report upstream), 
 
-rappael-rails           : 2.1.1 (gitlab git v2.1.0)
+raphael-rails           : 2.1.1 (gitlab git v2.1.0)
+
+gitlab-grit             : 2.6.0, test not included
+gitlab-gollum-lib       : 1.0.1, test not included
+gitlab-grack            : 1.0.1, license not included, some tests fail, gemspec has the old name (request change)
+gitlab-pygments.rb      : 0.3.2, license not included, in fail test, gemspec has the old name (request change)
+gitlab_git              : 2.1.0, license not included, test not included (PR for gemspec: add LICENSE, spec/, support/ to files, change page url)
+gitlab_omniauth-ldap    : 1.0.3, license missing, test pass
 
 ```
 
+-----------------------------------
+
+### Macros for Fedora spec
+
+```
+%doc %{gem_instdir}/LICENSE
+%exclude %{gem_instdir}/.*
+
+%doc %{gem_instdir}/CHANGELOG.md
+%doc %{gem_instdir}/README.md
+%{gem_instdir}/Gemfile
+%{gem_instdir}/Rakefile
+%{gem_instdir}/%{gem_name}.gemspec
+%{gem_instdir}/spec/
+%{gem_instdir}/test/
+%{gem_instdir}/Guardfile
+
+%check
+pushd .%{gem_instdir}
+testrb -Ilib test/
+rspec spec/
+popd
+
+BuildRequires: rubygem(test-unit)
+BuildRequires: rubygem(rspec)
+BuildRequires: rubygem(minitest)
+BuildRequires: rubygem(mocha)
+```
 
 ------------------------
 
@@ -154,31 +191,6 @@ Wrapper around gitlab-grit. Not a fork but depends on gitlab-grit.
 Doesn't need to be packaged, it only counts the number it gets downloaded from rubygems.org
 
 
------------------------------------
 
-### Macros for Fedora spec
 
-```
-%doc %{gem_instdir}/LICENSE
-%exclude %{gem_instdir}/.*
 
-%doc %{gem_instdir}/CHANGELOG.md
-%doc %{gem_instdir}/README.md
-%{gem_instdir}/Gemfile
-%{gem_instdir}/Rakefile
-%{gem_instdir}/%{gem_name}.gemspec
-%{gem_instdir}/spec/
-%{gem_instdir}/test/
-%{gem_instdir}/Guardfile
-
-%check
-pushd .%{gem_instdir}
-testrb -Ilib test/
-rspec spec/
-popd
-
-BuildRequires: rubygem(test-unit)
-BuildRequires: rubygem(rspec)
-BuildRequires: rubygem(minitest)
-BuildRequires: rubygem(mocha)
-```
