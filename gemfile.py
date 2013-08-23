@@ -237,15 +237,20 @@ def wiki_versions_table():
         '!colspan="5"|GitLab gem dependencies' + '\n' + \
         '|-' + '\n' + \
         '|rowspan="2"|Ruby gem'  + '\n' + \
-        '|colspan="3"|Version'  + '\n' + \
+        '|colspan="4"|Version'  + '\n' + \
         '|-'  + '\n' + \
         '|GitLab (Gemfile)'  + '\n' + \
         '|Fedora (rawhide)'  + '\n' + \
-        '|Upstream (rubygems.org)')
+        '|Upstream (rubygems.org)' + '\n' \
+        '|GitLab same as Upstream?')
 
     for gem in sorted(gitlab.keys()):
+      if versions[gem][0] == versions[gem][2]:
+          uptodate = 'YES'
+      else:
+          uptodate = 'NO'
       f.write('\n' + '|-' + '\n' + '|' + gem + '\n' + '|' + versions[gem][0] + '\n' + '|' \
-      + versions[gem][1] + '\n' + '|' + versions[gem][2])
+      + versions[gem][1] + '\n' + '|' + versions[gem][2] + '\n' + '|' + uptodate)
 
     f.write('\n' + '|}')
 
