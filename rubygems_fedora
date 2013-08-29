@@ -46,6 +46,7 @@ bundler
 bunny
 cairo
 capybara
+charlock_holmes
 childprocess
 chronic
 chunky_png
@@ -98,6 +99,7 @@ factory_girl_rails
 fakefs
 fakeweb
 fast_gettext
+fast_xs
 fattr
 ferret
 ffi
@@ -142,6 +144,7 @@ heroku-api
 highline
 hike
 hoe
+hoptoad_notifier
 hpricot
 htmlentities
 http_connection
@@ -195,6 +198,7 @@ mixlib-config
 mixlib-log
 mixlib-shellout
 mkrf
+mobileesp_converted
 mocha
 mongo
 mongoid
@@ -229,7 +233,7 @@ openstack
 openstack-compute
 openstack-quantum-client
 origin
-orm_adapter
+paint
 pam
 pango
 paranoia
@@ -264,6 +268,7 @@ rack-restful_submit
 rack-ssl
 rack-test
 rails
+rails-api
 rails_warden
 railties
 rainbow
@@ -277,7 +282,6 @@ rdiscount
 rdoc
 recaptcha
 redcarpet
-redis
 ref
 regin
 rerun
@@ -363,6 +367,7 @@ thor
 tilt
 timecop
 timers
+tins
 transaction-simple
 treetop
 trollop
@@ -381,6 +386,7 @@ whiskey_disk
 will_paginate
 wirble
 xml-simple
+xmlhash
 xmlparser
 xmpp4r
 xmpp4r-simple

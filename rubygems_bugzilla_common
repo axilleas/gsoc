@@ -1,10 +1,11 @@
 mysql2
+redis
 faraday
 omniauth
 chosen-rails
 backports
-stringex
 dotenv
+orm_adapter
 yajl-ruby
 unicorn
 connection_pool

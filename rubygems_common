@@ -9,6 +9,7 @@ asciidoctor
 bcrypt-ruby
 bootstrap-sass
 builder
+charlock_holmes
 chunky_png
 coffee-rails
 coffee-script
@@ -43,7 +44,6 @@ net-scp
 net-ssh
 nokogiri
 oauth
-orm_adapter
 pg
 polyglot
 rack
@@ -59,7 +59,6 @@ raindrops
 rake
 rdoc
 redcarpet
-redis
 ref
 ruby-hmac
 sanitize
