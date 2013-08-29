@@ -8,14 +8,14 @@ bugzilla_gems=$PWD/rubygems_bugzilla
 # Remove files if already exist
 ls -l | grep rubygem > /dev/null 2>&1
 if [ '$?' = '0' ];
-then 
+then
   rm rubygems_*
 fi
 
 echo 'Searching Fedora repositories...'
 #reposync --repoid=fedora,updates,updates-testing
 #yum search all rubygem | awk '{print $1}' | sort -k1 > $fedora_gems_raw
-repoquery rubygem-* > $fedora_gems_raw
+repoquery --disablerepo=fedora-gitlab,fedora-gitlab-noarch rubygem-* > $fedora_gems_raw
 
 # Striping uneeded symbols and the rubygem- prefix
 cat $fedora_gems_raw | sed -e 's/rubygem-//g;s/.fc19.noarch//g;s/.fc19.x86_64//g;/-doc/d;/-devel/d;/-debuginfo/d' | awk 'BEGIN { FS=":" }; {print $1}' | sed 's/.\{2\}$//g' > $fedora_gems
