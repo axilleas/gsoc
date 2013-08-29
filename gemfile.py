@@ -246,9 +246,9 @@ def wiki_versions_table():
 
     for gem in sorted(gitlab.keys()):
       if versions[gem][0] == versions[gem][2]:
-          uptodate = "<font color="green">'''YES'''</font>"
+          uptodate = "<font color=\"green\">'''YES'''</font>"
       else:
-          uptodate = "<font color="red">'''NO'''</font>"
+          uptodate = "<font color=\"red\">'''NO'''</font>"
       f.write('\n' + '|-' + '\n' + '|' + gem + '\n' + '|' + versions[gem][0] + '\n' + '|' \
       + versions[gem][1] + '\n' + '|' + versions[gem][2] + '\n' + '|' + uptodate)
 
