@@ -190,14 +190,3 @@ Wrapper around gitlab-grit. Not a fork but depends on gitlab-grit.
 
 Doesn't need to be packaged, it only counts the number it gets downloaded from rubygems.org
 
-#### [gitlabhq/raphael-rails](https://github.com/gitlabhq/raphael-rails)
-
-It's just a copy of an already forked repo. No changes made by GitLab. We could as well use
-the gem in rubygems.org, now in posession of `mockdeep/raphael-rails`.
-
-- GitLab fork origin
-  `YapLabs/raphael-rails -> koenpunt/raphael-rails -> gitlabhq/raphael-rails`
-- Rubygems gem origin
-  `YapLabs/raphael-rails -> mockdeep/raphael-rails`
-
-
