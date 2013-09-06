@@ -14,7 +14,6 @@
 #1001728 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-rkerberos - A Ruby interface for the the Kerberos library
 #825493 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-prototype-rails - Prototype, Scriptaculous, and RJS for Ruby on Rails
 #771314 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-parslet - Parser construction library with great error reporting in Ruby
-#1001865 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-parse-cron - Parses cron expressions and calculates the next occurrence
 #1000154 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-openshift-origin-dns-nsupdate - Provides a DNS service update plugin using nsupdate
 #823344 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-ohai - detects data about your system, exports as JSON for use with Chef
 #905240 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-log4r - Comprehensive and flexible logging library for ruby
@@ -35,25 +34,21 @@
 #929005 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-awestruct - A framework for creating static HTML sites
 #917074 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-angular-rails - Helpers for angularjs in a rails project
 #912961 NEW        - Miroslav Suchý - Review Request: rubygem-gtk3 - Ruby/GTK3 is a Ruby binding of GTK+-3.x
-#996618 NEW        - Ken Dreyer - Review Request: rubygem-ancestry - Organize ActiveRecord model into a tree structure
 #823351 ASSIGNED   - Vít Ondruch - Review Request: rubygem-yajl-ruby - Ruby C bindings to YAJL - a JSON stream-based parser
 #843153 ASSIGNED   - Vít Ondruch - Review Request: rubygem-sfcc - Ruby bindings for SBLIM client library
 #978284 ASSIGNED   - Vít Ondruch - Review Request: rubygem-redis - A Ruby client library for Redis
+#989400 ASSIGNED   - Vít Ondruch - Review Request: rubygem-mini_portile - Simplistic port-like solution for developers
 #739478 ASSIGNED   - Vít Ondruch - Review request: rubygem-jammit - Industrial Strength Asset Packaging for Rails
-#967335 ASSIGNED   - Vít Ondruch - Review Request: rubygem-dotenv - Loads environment variables from `.env`
 #967334 ASSIGNED   - Vít Ondruch - Review Request: rubygem-connection_pool - Generic connection pool for Ruby
 #738465 ASSIGNED   - Vít Ondruch - Review Request: rubygem-barista - Simple, integrated support for CoffeeScript in Rack and Rails applications
 #960047 ASSIGNED   - Vít Ondruch - Review Request: rubygem-annotate - Annotates Rails Models, routes, fixtures etc based on the database schema
 #915009 ASSIGNED   - Ricky Elrod - Review Request: rubygem-ruby-pcap - Ruby interface to LBL Packet Capture library.
 #894524 ASSIGNED   - Nobody's working on this, feel free to take it - Review Request: rubygem-openshift-origin-console - OpenShift Origin Management Console
-#989400 ASSIGNED   - Nobody's working on this, feel free to take it - Review Request: rubygem-mini_portile - Simplistic port-like solution for developers
 #1001984 ASSIGNED   - Miroslav Suchý - Review Request: rubygem-text - Collection of text algorithms
 #991339 ASSIGNED   - Miroslav Suchý - Review Request: rubygem-sdoc - RDoc generator to build searchable HTML documentation for Ruby code
 #974889 ASSIGNED   - Miroslav Suchý - Review Request: rubygem-mysql2 - A simple, fast Mysql library for Ruby, binding to libmysql
 #912960 ASSIGNED   - Miroslav Suchý - Review Request: rubygem-gdk3 - Ruby binding of GDK-3.x
 #894482 ASSIGNED   - Michael Scherer - Review Request: rubygem-openshift-origin-auth-kerberos - OpenShift plugin for kerberos auth service
-#998915 ASSIGNED   - Mamoru TASAKA - Review Request: rubygem-wirb - Wavy IRB: Colorizes irb results
-#1000334 ASSIGNED   - Mamoru TASAKA - Review Request: rubygem-single_test - Rake tasks to invoke single tests/specs with rakish syntax
 #988938 ASSIGNED   - Lukas Bezdicka - Review Request: rubygem-orm_adapter - Provides a single point of entry for using basic features of ruby ORMs
 #989775 ASSIGNED   - Lubomir Rintel - Review Request: rubygem-omniauth - A generalized Rack framework for multiple-provider authentication
 #642601 ASSIGNED   - Jozef Zigmund - Review Request: rubygem-uuid - Ruby UUID generator based on RFC 4122

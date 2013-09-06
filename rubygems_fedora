@@ -17,6 +17,7 @@ addressable
 allison
 amazon-ec2
 ammeter
+ancestry
 apipie-rails
 appraisal
 archive-tar-minitar
@@ -83,6 +84,7 @@ deltacloud-client
 diff-lcs
 ditz
 dnsruby
+dotenv
 dynect_rest
 echoe
 erubis
@@ -332,6 +334,7 @@ sexp_processor
 shindo
 shotgun
 shoulda
+shoulda-context
 simple-navigation
 simple-rss
 simple_form
@@ -339,6 +342,7 @@ simplecov
 simplecov-html
 sinatra
 sinatra-rabbit
+single_test
 slim
 slop
 snmp
@@ -384,6 +388,7 @@ webrat
 webrobots
 whiskey_disk
 will_paginate
+wirb
 wirble
 xml-simple
 xmlhash

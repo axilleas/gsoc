@@ -1,4 +1,3 @@
-ancestry
 angular-rails
 annotate
 awestruct
@@ -15,7 +14,6 @@ connection_pool
 datagrepper
 debug_inspector
 domain_name
-dotenv
 faker
 faraday
 fcgi
@@ -40,7 +38,6 @@ openshift-origin-auth-kerberos
 openshift-origin-console
 openshift-origin-dns-nsupdate
 orm_adapter
-parse-cron
 parslet
 prototype-rails
 rails_best_practices
@@ -54,7 +51,6 @@ rugged
 sdoc
 serialport
 sfcc
-single_test
 strong_parameters
 table_print
 text
@@ -67,7 +63,6 @@ unicorn
 useragent
 uuid
 vagrant
-wirb
 wrongdoc
 yajl-ruby
 yui-compressor
