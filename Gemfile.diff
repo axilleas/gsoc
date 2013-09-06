@@ -1,5 +1,5 @@
 diff --git a/Gemfile b/Gemfile
-index c78f525..21f5b6e 100644
+index c78f525..d2e7aa3 100644
 --- a/Gemfile
 +++ b/Gemfile
 @@ -23,7 +23,7 @@ gem 'omniauth-github'
@@ -7,19 +7,10 @@ index c78f525..21f5b6e 100644
  # Extracting information from a git repository
  # Provide access to Gitlab::Git library
 -gem "gitlab_git", '2.0.1'
-+gem "gitlab_git", '2.1.0'
++gem "gitlab_git", '2.1.1'
  
  # Ruby/Rack Git Smart-HTTP Server Handler
  gem 'gitlab-grack', '~> 1.0.1', require: 'grack'
-@@ -41,7 +41,7 @@ gem "gitlab-gollum-lib", "~> 1.0.1", require: 'gollum-lib'
- gem "github-linguist", require: "linguist"
- 
- # API
--gem "grape", "~> 0.4.1"
-+gem "grape", "~> 0.5.0"
- gem "grape-entity", "~> 0.3.0"
- 
- # Format dates and times
 @@ -70,14 +70,13 @@ gem "six"
  gem "seed-fu"
  
@@ -66,7 +57,7 @@ index c78f525..21f5b6e 100644
  
  # Sanitize user input
  gem "sanitize"
-@@ -125,25 +124,25 @@ group :assets do
+@@ -125,17 +124,17 @@ group :assets do
    gem "sass-rails"
    gem "coffee-rails"
    gem "uglifier"
@@ -87,9 +78,8 @@ index c78f525..21f5b6e 100644
 +  gem "raphael-rails"
    gem 'bootstrap-sass'
    gem "font-awesome-rails"
--  gem "gemoji", "~> 1.2.1", require: 'emoji/railtie'
-+  gem "gemoji", "~> 1.4.0", require: 'emoji/railtie'
-   gem "gon"
+   gem "gemoji", "~> 1.2.1", require: 'emoji/railtie'
+@@ -143,7 +142,7 @@ group :assets do
  end
  
  group :development do
