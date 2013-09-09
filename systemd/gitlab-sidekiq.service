@@ -10,7 +10,7 @@ User=git
 WorkingDirectory=/home/git/gitlab
 Environment=RAILS_ENV=production
 SyslogIdentifier=gitlab-sidekiq
-PidFile=/home/git/gitlab/tmp/pids/sidekiq.pid
+PIDFile=/home/git/gitlab/tmp/pids/sidekiq.pid
 
 ExecStart=/usr/bin/sidekiq -q post_receive,mailer,system_hook,project_web_hook,gitlab_shell,common,default -e production -d -P /home/git/gitlab/tmp/pids/sidekiq.pid -L /home/git/gitlab/log/sidekiq.log
 

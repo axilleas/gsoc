@@ -8,7 +8,7 @@ User=git
 WorkingDirectory=/home/git/gitlab
 Environment=RAILS_ENV=production
 SyslogIdentifier=gitlab-unicorn
-PidFile=/home/git/gitlab/tmp/pids/unicorn.pid
+PIDFile=/home/git/gitlab/tmp/pids/unicorn.pid
 
 ExecStart=/usr/bin/unicorn_rails -c /home/git/gitlab/config/unicorn.rb -E production
 
