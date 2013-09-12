@@ -43,11 +43,11 @@ faraday_middleware      : 0.9.0  ok,
 font-awesome-rails      : 3.2.1.2 ok, test fail
 foreman                 : 0.63.0 ok, license need download, test fail need unpackaged gems
 gemoji                  : 1.4.0 (gitlab 1.2.1 test and request gitlab update), license need download and clarification in spec
-github-linguist         : 2.8.12 (gitlab 2.3.4), no test/license is shipped
+github-linguist         : 2.9.4 (gitlab 2.3.4), no test/license is shipped
 github-markdown         : 0.5.3 ok, no license is shipped, test fail
 github-markup           : 0.7.5 ok, test fail
 gon                     : 4.1.1 ok, license not present as a file, test fail due to unpackaged gems (rabl, rabl-rails, jbuilder)
-grape                   : 0.5.0 (gitlab 0.4.1), test need unpackaged gems (see Gemfile)
+grape                   : 0.5.0 (gitlab 0.4.1), test need unpackaged gems (see Gemfile), 0.4.x and 0.5.x have the same deps
 virtus                  : 0.5.5 ok, required by grape, test pass (1 pending)
 grape-entity            : 0.3.0 ok, test fail
 hipchat                 : 0.11.0 (gitlab 0.9.0), test fail
@@ -190,3 +190,99 @@ Wrapper around gitlab-grit. Not a fork but depends on gitlab-grit.
 
 Doesn't need to be packaged, it only counts the number it gets downloaded from rubygems.org
 
+
+## Package gitlab itself
+
+We need 4 directories: `gitlab`, `gitlab-shell`, `gitlab-satellites`, `repositories`.
+
+```
+|-- /var/lib/gitlab
+|     |-- www
+|     |-- gitlab-shell
+
+|-- /usr/lib/gitlab
+|     |-- satellites
+|     |-- repositories
+|     |-- .ssh/authorized_keys
+```
+
+homedir=/usr/lib/gitlab
+datadir=/var/lib/gitlab
+	cd "$srcdir/$pkgname-$pkgver"
+install -dm755 "$pkgdir$homedir/gitlab-shell" "$pkgdir/etc/gitlab"
+
+sed -e 's|user: git|user: gitlab|' \
+-e "s|/home/git/repositories|$datadir/repositories|" \
+-e "s|/home/git|$homedir|" \
+config.yml.example > "$pkgdir/etc/gitlab/shell.yml"
+ln -s /etc/gitlab/shell.yml "$pkgdir$homedir/gitlab-shell/config.yml"
+
+cp -a VERSION bin hooks lib spec support "$pkgdir$homedir/gitlab-shell"
+
+install -dm700 "$pkgdir$homedir/.ssh"
+touch "$pkgdir$homedir/.ssh/authorized_keys"
+
+install -dm770 "$pkgdir$datadir/"{repositories,satellites}
+chmod g+s "$pkgdir$datadir/repositories"
+ln -s "$datadir/repositories" "$pkgdir$homedir/repositories"
+ln -s "$datadir/satellites" "$pkgdir$homedir/satellites"
+
+
+### gitlab-shell
+
+  "mkdir -p #{config.repos_path}",
+  "mkdir -p #{key_dir}",
+  "chmod 700 #{key_dir}",
+  "touch #{config.auth_file}",
+  "chmod 600 #{config.auth_file}",
+  "chmod -R ug+rwX,o-rwx #{config.repos_path}",
+  "find #{config.repos_path} -type d -print0 | xargs -0 chmod g+s"
+
+#### Tree
+
+```
+├── bin
+│   ├── check
+│   ├── gitlab-keys
+│   ├── gitlab-projects
+│   ├── gitlab-shell
+│   └── install
+├── CHANGELOG
+├── config.yml
+├── config.yml.example
+├── Gemfile
+├── Gemfile.lock
+├── gitlab-shell.log
+├── Guardfile
+├── hooks
+│   └── update
+├── lib
+│   ├── gitlab_config.rb
+│   ├── gitlab_init.rb
+│   ├── gitlab_keys.rb
+│   ├── gitlab_logger.rb
+│   ├── gitlab_net.rb
+│   ├── gitlab_projects.rb
+│   ├── gitlab_shell.rb
+│   └── gitlab_update.rb
+├── LICENSE
+├── README.md
+├── spec
+│   ├── gitlab_keys_spec.rb
+│   ├── gitlab_net_spec.rb
+│   ├── gitlab_projects_spec.rb
+│   ├── gitlab_shell_spec.rb
+│   ├── spec_helper.rb
+│   └── vcr_cassettes
+│       ├── allowed-pull.yml
+│       ├── allowed-push.yml
+│       ├── check-ok.yml
+│       ├── denied-pull.yml
+│       ├── denied-push.yml
+│       ├── dev_gitlab_org.yml
+│       └── discover-ok.yml
+├── support
+│   ├── rewrite-hooks.sh
+│   └── truncate_repositories.sh
+└── VERSION
+```
