@@ -82,10 +82,10 @@ chmod g+s $datadir/repositories
 %postun
 %if getent passwd git >/dev/null 2>&1; then
 userdel gitlab
-%fi
+%endif
 %if getent group git >/dev/null 2>&1; then
 groupdel gitlab
-%fi
+%endif
 
 %files
 
