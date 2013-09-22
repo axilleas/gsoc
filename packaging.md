@@ -206,7 +206,7 @@ We need 4 directories: `gitlab`, `gitlab-shell`, `gitlab-satellites`, `repositor
 |     |-- .ssh/authorized_keys
 ```
 
-``
+```
 homedir=/usr/share/gitlab
 datadir=/var/lib/gitlab
 ```
