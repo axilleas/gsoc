@@ -26,7 +26,7 @@ where difficult to run and put them in a public [repo](http://repos.fedorapeople
 ```
 act-as-taggable         : 2.4.1 ok, test need download, no test run
 backports               : 3.3.3 (gitlab 3.3.2 test and request upstream update), no test run, where to put dirs
-carrierwave             : 0.9 (gitlab 0.8), license/test need download, 
+carrierwave             : 0.9 (gitlab 0.8), license/test need download,
 celluloid               : 0.14.1  ok, license need download, spec/ does not include all needed files
 chosen-rails            : 1.0.0 (gitlab 0.9.8, 2 years ago) latest version needs extra dep (compass-rails)
 (compass-rails)         : required by chosen-rails-1.0.0, no test run
@@ -56,18 +56,18 @@ httpauth                : 0.2.0 ok, doesn't ship test
 jquery-atwho-rails      : 0.3.1 (gitlab 0.3.0 test and request update), test fail (missing generator_rspec), license missing
 jquery-turbolinks       : 1.0.0 ok, test in coffeescript did not check
 jquery-ui-rails         : 2.0.2 (upstream 4.0.4), doesn't ship test
-jwt                     : 0.1.8 ok, license not included, 
+jwt                     : 0.1.8 ok, license not included,
 kaminari                : 0.14.1 ok, test fail due to deps (resolve later)
 modernizr               : 2.6.2 ok, missing license file (report upstream), to tests available, ready for BZ
 mysql2                  : 0.3.13 (gitlab 0.3.11 test and request update)
-oauth2                  : 0.8.1 (upstream 0.9.2), required by omniauth-oauth2, test fail 
+oauth2                  : 0.8.1 (upstream 0.9.2), required by omniauth-oauth2, test fail
 omniauth                : 1.1.4 ok, submitted to BZ , required by omniauth-oauth2
-omniauth-github         : 1.1.0 ok, missing license file, 
+omniauth-github         : 1.1.0 ok, missing license file,
 omniauth-google-oauth2  : 0.2.0 (gitlab 0.1.19), missing license/url (report upstream), test fail
 omniauth-oauth          : 1.0.1 ok, test fail
 omniauth-oauth2         : 1.1.1 ok, missing license file (report upstream), 1.1.1 needs oauth2 < 0.9
 omniauth-twitter        : 1.0.0 (gitlab 0.0.17), missing license file (report upstream), test fail
-orm_adapter             : 0.4.0 ok, submitted to BZ 
+orm_adapter             : 0.4.0 ok, submitted to BZ
 posix-spawn             : 0.3.6 ok, test fail
 puma                    : 2.4.0 (gitlab 2.3.1), test fail
 pygments.rb             : 0.5.2 (gitlab 0.4.2), requires posix-spawn, yajl-ruby, todo: remove .py[oc], exclude autorequires /usr/bin/env, test pass
@@ -80,9 +80,9 @@ redis-rack              : 1.4.2 ok, required by redis-actionpack, test fail
 redis-rails             : 3.2.3 ok, omit test
 redis-store             : 1.1.3 ok, required by redis-{rails,actionpack,rack,activesupport}, test fail
 yajl-ruby               : 1.1.0 ok, test pass, ready to BZ
-rubyntlm                : 0.3.3 (gitlab 0.1.1), missing license (https://github.com/WinRb/rubyntlm/issues/5), test fail 
+rubyntlm                : 0.3.3 (gitlab 0.1.1), missing license (https://github.com/WinRb/rubyntlm/issues/5), test fail
 seed-fu                 : 2.2.0 ok, test not included (request upstream)
-select2-rails           : 3.4.7 (gitlab 3.4.2 test and request update), missing license file (report upstream), 
+select2-rails           : 3.4.7 (gitlab 3.4.2 test and request update), missing license file (report upstream),
 settingslogic           : 2.0.9 ok, test pass, ready for submission to BZ
 sidekiq                 : 2.13.0 (gitlab 2.12.4 test and request update), some test fail
 simple_oauth            : 0.2.0 (gitlab 0.1.9 test and request update), some test fail
@@ -94,7 +94,7 @@ twitter-stream          : 0.1.16 ok, test pass, ready for sumbission in BZ
 underscore-rails        : 1.5.1 (gitlab 1.4.4), license file not included (https://github.com/rweng/underscore-rails/issues/19)
 unicorn                 : 4.6.3 ok, some tests fail
 
-libv8                   : 3.16.14.1 (gitlab 3.11.8.17), missing license file (report upstream), 
+libv8                   : 3.16.14.1 (gitlab 3.11.8.17), missing license file (report upstream),
 
 raphael-rails           : 2.1.1 (gitlab git v2.1.0)
 
@@ -142,9 +142,9 @@ BuildRequires: rubygem(mocha)
 
 #### [gitlab-grit](https://github.com/gitlabhq/grit)
 
-All other forks depend on this. Upstream is idle for too long with many 
-PRs and bugs not addressed. Seems their main concern is now rugged, a replacement 
-of grit. That is the main reason GitLab went on a fork (the plan is to switch from 
+All other forks depend on this. Upstream is idle for too long with many
+PRs and bugs not addressed. Seems their main concern is now rugged, a replacement
+of grit. That is the main reason GitLab went on a fork (the plan is to switch from
 grit to rugged once the latter gets all the needed functionality, likely won't happen in another year or so).
 See upstream grit [sparse commits](https://github.com/mojombo/grit/commits/master) and sumbitted [issues](https://github.com/mojombo/grit/issues).
 
@@ -169,7 +169,7 @@ for their changes.
 #### [gitlab-pygments.rb](https://github.com/gitlabhq/pygments.rb)
 
 As already discussed, there is a [pending PR](https://github.com/tmm1/pygments.rb/pull/77)
-to be merged upstream and finally drop the fork. 
+to be merged upstream and finally drop the fork.
 
 #### [gitlab_git](https://github.com/gitlabhq/gitlab_git)
 
@@ -196,47 +196,22 @@ Doesn't need to be packaged, it only counts the number it gets downloaded from r
 We need 4 directories: `gitlab`, `gitlab-shell`, `gitlab-satellites`, `repositories`.
 
 ```
-|-- /var/lib/gitlab
-|     |-- www
+|-- /usr/share/gitlab
+|     |-- gitlab
 |     |-- gitlab-shell
 
-|-- /usr/lib/gitlab
+|-- /var/lib/gitlab
 |     |-- satellites
 |     |-- repositories
 |     |-- .ssh/authorized_keys
 ```
 
-homedir=/usr/lib/gitlab
+``
+homedir=/usr/share/gitlab
 datadir=/var/lib/gitlab
-	cd "$srcdir/$pkgname-$pkgver"
-install -dm755 "$pkgdir$homedir/gitlab-shell" "$pkgdir/etc/gitlab"
-
-sed -e 's|user: git|user: gitlab|' \
--e "s|/home/git/repositories|$datadir/repositories|" \
--e "s|/home/git|$homedir|" \
-config.yml.example > "$pkgdir/etc/gitlab/shell.yml"
-ln -s /etc/gitlab/shell.yml "$pkgdir$homedir/gitlab-shell/config.yml"
-
-cp -a VERSION bin hooks lib spec support "$pkgdir$homedir/gitlab-shell"
-
-install -dm700 "$pkgdir$homedir/.ssh"
-touch "$pkgdir$homedir/.ssh/authorized_keys"
-
-install -dm770 "$pkgdir$datadir/"{repositories,satellites}
-chmod g+s "$pkgdir$datadir/repositories"
-ln -s "$datadir/repositories" "$pkgdir$homedir/repositories"
-ln -s "$datadir/satellites" "$pkgdir$homedir/satellites"
-
+```
 
 ### gitlab-shell
-
-  "mkdir -p #{config.repos_path}",
-  "mkdir -p #{key_dir}",
-  "chmod 700 #{key_dir}",
-  "touch #{config.auth_file}",
-  "chmod 600 #{config.auth_file}",
-  "chmod -R ug+rwX,o-rwx #{config.repos_path}",
-  "find #{config.repos_path} -type d -print0 | xargs -0 chmod g+s"
 
 #### Tree
 
