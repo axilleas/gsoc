@@ -23,7 +23,7 @@ gem 'omniauth-github'
 
 # Extracting information from a git repository
 # Provide access to Gitlab::Git library
-gem "gitlab_git", '2.1.1'
+gem "gitlab_git", '2.3.1'
 
 # Ruby/Rack Git Smart-HTTP Server Handler
 gem 'gitlab-grack', '~> 1.0.1', require: 'grack'
@@ -36,6 +36,9 @@ gem "gitlab-pygments.rb", '~> 0.3.2', require: 'pygments.rb'
 
 # Git Wiki
 gem "gitlab-gollum-lib", "~> 1.0.1", require: 'gollum-lib'
+
+# Needed for rack-mount
+gem "regin"
 
 # Language detection
 gem "github-linguist", require: "linguist"
@@ -134,7 +137,7 @@ group :assets do
   gem "jquery-rails",     "3.0.4"
   gem "jquery-ui-rails",  "2.0.2"
   gem "modernizr",        "2.6.2"
-  gem "raphael-rails"
+  gem "raphael-rails", "~> 2.1.2"
   gem 'bootstrap-sass'
   gem "font-awesome-rails"
   gem "gemoji", "~> 1.2.1", require: 'emoji/railtie'
@@ -142,7 +145,7 @@ group :assets do
 end
 
 group :development do
-  gem "annotate"
+  gem "annotate", git: "https://github.com/ctran/annotate_models.git"
   gem "letter_opener"
   gem 'quiet_assets', '~> 1.0.1'
   gem 'rack-mini-profiler'
@@ -187,7 +190,7 @@ group :development, :test do
   gem 'rb-inotify', require: linux_only('rb-inotify')
 
   # PhantomJS driver for Capybara
-  gem 'poltergeist', '~> 1.3.0'
+  gem 'poltergeist', '~> 1.4.1'
 
   gem 'spork', '~> 1.0rc'
   gem 'jasmine'
@@ -201,3 +204,6 @@ group :test do
   gem 'test_after_commit'
 end
 
+#group :production do
+#  gem "gitlab_meta", '6.0'
+#end
