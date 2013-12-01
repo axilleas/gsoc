@@ -5,23 +5,15 @@
 !Bugzilla id
 !Status
 |-
-|acts-as-taggable-on
-| - 
-| - 
-|-
 |backports
-|[https://bugzilla.redhat.com/show_bug.cgi?id=816991 816991]
-|NEW
+| - 
+| - 
 |-
 |carrierwave
 | - 
 | - 
 |-
 |celluloid
-| - 
-| - 
-|-
-|charlock_holmes
 | - 
 | - 
 |-
@@ -37,17 +29,13 @@
 | - 
 | - 
 |-
-|descendants_tracker
-| - 
-| - 
-|-
 |devise
 | - 
 | - 
 |-
-|dotenv
-|[https://bugzilla.redhat.com/show_bug.cgi?id=967335 967335]
-|ASSIGNED
+|devise-async
+| - 
+| - 
 |-
 |enumerize
 | - 
@@ -58,8 +46,8 @@
 | - 
 |-
 |faraday
-|[https://bugzilla.redhat.com/show_bug.cgi?id=967337 967337]
-|ASSIGNED
+| - 
+| - 
 |-
 |faraday_middleware
 | - 
@@ -77,15 +65,15 @@
 | - 
 | - 
 |-
-|github-linguist
-| - 
-| - 
-|-
 |github-markdown
-| - 
-| - 
+|[https://bugzilla.redhat.com/show_bug.cgi?id=1026052 1026052]
+|ASSIGNED
 |-
 |github-markup
+| - 
+| - 
+|-
+|gitlab-flowdock-git-hook
 | - 
 | - 
 |-
@@ -98,6 +86,10 @@
 | - 
 |-
 |gitlab-grit
+| - 
+| - 
+|-
+|gitlab-linguist
 | - 
 | - 
 |-
@@ -126,10 +118,6 @@
 | - 
 |-
 |grape-entity
-| - 
-| - 
-|-
-|hipchat
 | - 
 | - 
 |-
@@ -169,21 +157,9 @@
 | - 
 | - 
 |-
-|mysql2
-|[https://bugzilla.redhat.com/show_bug.cgi?id=974889 974889]
-|ASSIGNED
-|-
-|newrelic_rpm
-| - 
-| - 
-|-
 |oauth2
 | - 
 | - 
-|-
-|omniauth
-|[https://bugzilla.redhat.com/show_bug.cgi?id=989775 989775]
-|NEW
 |-
 |omniauth-github
 | - 
@@ -209,15 +185,15 @@
 | - 
 | - 
 |-
-|puma
-| - 
-| - 
-|-
-|pygments.rb
-| - 
-| - 
-|-
 |pyu-ruby-sasl
+| - 
+| - 
+|-
+|rack-attack
+| - 
+| - 
+|-
+|raphael-rails
 | - 
 | - 
 |-
@@ -226,10 +202,6 @@
 | - 
 |-
 |redis-activesupport
-| - 
-| - 
-|-
-|redis-namespace
 | - 
 | - 
 |-
@@ -278,8 +250,8 @@
 | - 
 |-
 |stringex
-|[https://bugzilla.redhat.com/show_bug.cgi?id=728051 728051]
-|ASSIGNED
+| - 
+| - 
 |-
 |tinder
 | - 
