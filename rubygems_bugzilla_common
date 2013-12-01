@@ -1,11 +1,5 @@
-mysql2
-redis
-faraday
-omniauth
 chosen-rails
-backports
-dotenv
-orm_adapter
+github-markdown
 yajl-ruby
 unicorn
 connection_pool

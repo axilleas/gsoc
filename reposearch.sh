@@ -25,7 +25,7 @@ echo 'Done!'
 # Install python-bugzilla first
 echo 'Searching Bugzilla for Review Requests...'
 # Save raw query
-bugzilla query --product=fedora --bug_status=new,assigned --component='Package Review' --short_desc='rubygem-' | sort -k2 -r > $bugzilla_gems_raw
+bugzilla query --product=fedora --bug_status=NEW,ASSIGNED --component='Package Review' --short_desc='rubygem-' | sort -k2 -r > $bugzilla_gems_raw
 
 # Keep names only
 bugzilla query --product=fedora --bug_status=new,assigned --component='Package Review' --short_desc='rubygem-' \

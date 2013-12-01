@@ -10,7 +10,7 @@ import pkgwat.api
 
 # Declare files
 
-gitlab_gems_file = os.path.realpath('gitlab6-gems')
+gitlab_gems_file = os.path.realpath('gitlab63-gems')
 rubygems_fedora = os.path.realpath('rubygems_fedora')
 rubygems_gitlab = os.path.realpath('rubygems_gitlab')
 rubygems_missing = os.path.realpath('rubygems_missing')
@@ -218,6 +218,8 @@ def all_versions(dicts):
   for gem in dicts[0].keys():
     versions[gem] = [dicts[0][gem], dicts[1][gem], dicts[2][gem]]
 
+  dict_to_json(versions, gems_versions_json)
+
   return versions
 
 def wiki_versions_table():
@@ -225,7 +227,6 @@ def wiki_versions_table():
   Wikify the versions of gems among gitlab, fedora and upstream.
   Results go in https://fedoraproject.org/wiki/User:Axilleas/GitLab
   '''
-  gitlab = dict_of_runtime_gitlab_gems(gitlab_gems_file)
   dicts = populate_dicts()
   versions = all_versions(dicts)
 
@@ -244,6 +245,7 @@ def wiki_versions_table():
         '|Upstream (rubygems.org)' + '\n' \
         '|GitLab same as Upstream?')
 
+    gitlab = dict_of_runtime_gitlab_gems(gitlab_gems_file)
     for gem in sorted(gitlab.keys()):
       if versions[gem][0] == versions[gem][2]:
           uptodate = "<font color=\"green\">'''YES'''</font>"
