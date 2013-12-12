@@ -3,7 +3,7 @@ These are some dummy scripts to find which gems that [GitLab][gitlab] is using, 
 On a Fedora machine, clone the repository, cd into it and run:
 
 ```  
-sudo yum install python2 python-bugzilla python-pkgwat.api
+sudo yum install python2 python-bugzilla python-pkgwat-api
 chmod +x run.sh
 ./run.sh
 ```
