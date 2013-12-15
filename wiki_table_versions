@@ -1,13 +1,11 @@
-{| class="wikitable" style="text-align: center;" cellpadding="10"
-!colspan="5"|GitLab gem dependencies
+{| class="wikitable sortable" border="1" style="text-align: center;" cellpadding="10"
+|+GitLab gem runtime dependencies
 |-
-|rowspan="2"|Ruby gem
-|colspan="4"|Version
-|-
-|GitLab (Gemfile)
-|Fedora (rawhide)
-|Upstream (rubygems.org)
-|GitLab same as Upstream?
+! scope="col" |Ruby gem
+! scope="col" class="unsortable" |GitLab (Gemfile)
+! scope="col" class="unsortable" |Fedora (rawhide)
+! scope="col" class="unsortable" |Upstream (rubygems.org)
+! scope="col" |GitLab == Upstream
 |-
 |actionmailer
 |4.0.2

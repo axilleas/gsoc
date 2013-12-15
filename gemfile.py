@@ -234,16 +234,14 @@ def wiki_versions_table():
     os.remove(versions_table)
 
   with open(versions_table, 'a') as f:
-    f.write('{| class="wikitable" style="text-align: center;" cellpadding="10"' + '\n' + \
-        '!colspan="5"|GitLab gem dependencies' + '\n' + \
+    f.write('{| class="wikitable sortable" border="1" style="text-align: center;" cellpadding="10"' + '\n' + \
+        '|+ GitLab gem runtime dependencies' + '\n' + \
         '|-' + '\n' + \
-        '|rowspan="2"|Ruby gem'  + '\n' + \
-        '|colspan="4"|Version'  + '\n' + \
-        '|-'  + '\n' + \
-        '|GitLab (Gemfile)'  + '\n' + \
-        '|Fedora (rawhide)'  + '\n' + \
-        '|Upstream (rubygems.org)' + '\n' \
-        '|GitLab same as Upstream?')
+        '! scope="col" |Ruby gem'  + '\n' + \
+        '! scope="col" class="unsortable" |GitLab (Gemfile)'  + '\n' + \
+        '! scope="col" class="unsortable" |Fedora (rawhide)'  + '\n' + \
+        '! scope="col" class="unsortable" |Upstream (rubygems.org)' + '\n' \
+        '! scope="col" |GitLab same as Upstream?')
 
     gitlab = dict_of_runtime_gitlab_gems(gitlab_gems_file)
     for gem in sorted(gitlab.keys()):
