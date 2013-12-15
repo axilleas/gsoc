@@ -1,14 +1,19 @@
 #1001818 NEW        - Ricky Elrod - Review Request: rubygem-table_print - shows objects in nicely formatted columns for easy reading
 #895166 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-zbxapi - Ruby wrapper to the Zabbix API
 #725768 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-yui-compressor - JavaScript and CSS minification library
+#1039818 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-wikicloth - Mediawiki parser
+#1040180 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-virtus - Attributes on Steroids for Plain Old Ruby Objects
 #786636 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-unicorn - Rack HTTP server for fast clients and Unix
 #796112 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-tidy_ffi - Tidy library interface via FFI
 #949317 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-serialport - Ruby library that provide class for RS232 serail port
 #683789 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-rubytree - RubyTree is a Ruby implementation of the generic tree data structure
-#1031318 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-rabbit - RD-document-based presentation application
+#1037900 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-resque-job-stats - Job-centric stats for Resque
+#1037278 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-resque-cleaner - Resque plugin to clean up failed jobs
 #825493 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-prototype-rails - Prototype, Scriptaculous, and RJS for Ruby on Rails
 #771314 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-parslet - Parser construction library with great error reporting in Ruby
+#1036901 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-org-ruby - Ruby routines for parsing org-mode files
 #823344 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-ohai - detects data about your system, exports as JSON for use with Chef
+#1038274 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-liquid - A secure, non-evaling end user template engine with aesthetic markup
 #949319 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-icaro - Ruby Api for Icaro Robotic
 #771311 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-gli - Git-Like Interface Command Line Parser for Ruby
 #683780 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-gem-open - Open gems on your favorite editor by running gem open command
@@ -18,27 +23,25 @@
 #725733 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-closure-compiler - Ruby Wrapper for the Google Closure Compiler
 #823352 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-chef - a client for the Chef config management system
 #771316 NEW        - Nobody's working on this, feel free to take it - Review Request: rubygem-blankslate - Ruby gem which provides an abstract base class with no predefined methods
-#1016863 NEW        - Ken Dreyer - Review Request: rubygem-parallel - Run any kind of code in parallel processes
 #929005 ASSIGNED   - Will Benton - Review Request: rubygem-awestruct - A framework for creating static HTML sites
+#739478 ASSIGNED   - Vít Ondruch - Review request: rubygem-jammit - Industrial Strength Asset Packaging for Rails
 #823351 ASSIGNED   - Vít Ondruch - Review Request: rubygem-yajl-ruby - Ruby C bindings to YAJL - a JSON stream-based parser
 #843153 ASSIGNED   - Vít Ondruch - Review Request: rubygem-sfcc - Ruby bindings for SBLIM client library
-#739478 ASSIGNED   - Vít Ondruch - Review request: rubygem-jammit - Industrial Strength Asset Packaging for Rails
 #967334 ASSIGNED   - Vít Ondruch - Review Request: rubygem-connection_pool - Generic connection pool for Ruby
 #771297 ASSIGNED   - Vít Ondruch - Review Request: rubygem-bluecloth - A Ruby implementation of John Gruber's Markdown
 #738465 ASSIGNED   - Vít Ondruch - Review Request: rubygem-barista - Simple, integrated support for CoffeeScript in Rack and Rails applications
 #960047 ASSIGNED   - Vít Ondruch - Review Request: rubygem-annotate - Annotates Rails Models, routes, fixtures etc based on the database schema
 #915009 ASSIGNED   - Ricky Elrod - Review Request: rubygem-ruby-pcap - Ruby interface to LBL Packet Capture library.
 #1020457 ASSIGNED   - Nobody's working on this, feel free to take it - Review Request: rubygem-vagrant-kvm - KVM plugin for Vagrant
-#1033358 ASSIGNED   - Nobody's working on this, feel free to take it - Review Request: rubygem-resque - A Redis-backed queueing system
 #991339 ASSIGNED   - Miroslav Suchý - Review Request: rubygem-sdoc - RDoc generator to build searchable HTML documentation for Ruby code
 #894524 ASSIGNED   - Michael Scherer - Review Request: rubygem-openshift-origin-console - OpenShift Origin Management Console
 #894482 ASSIGNED   - Michael Scherer - Review Request: rubygem-openshift-origin-auth-kerberos - OpenShift plugin for kerberos auth service
-#1032186 ASSIGNED   - Mamoru TASAKA - Review Request: rubygem-rack-openid - Provides a more HTTPish API around the ruby-openid library
-#1027513 ASSIGNED   - Mamoru TASAKA - Review Request: rubygem-axiom-types - Abstract types for logic programming
-#1031317 ASSIGNED   - Ken Dreyer - Review Request: rubygem-rttool - Converter from RT into various formats
+#1036944 ASSIGNED   - Mamoru TASAKA - Review Request: rubygem-dependor - Simplify dependency injection in Ruby
+#1031318 ASSIGNED   - Ken Dreyer - Review Request: rubygem-rabbit - RD-document-based presentation application
+#1016863 ASSIGNED   - Ken Dreyer - Review Request: rubygem-parallel - Run any kind of code in parallel processes
+#1040767 ASSIGNED   - Ken Dreyer - Review Request: rubygem-net-irc - Library for implementing IRC server and client
 #1029161 ASSIGNED   - Ken Dreyer - Review Request: rubygem-linux_admin - A module to simplify management of Linux systems
 #1026052 ASSIGNED   - Ken Dreyer - Review Request: rubygem-github-markdown - rubygem to process github markdown
-#1035129 ASSIGNED   - Ken Dreyer - Review Request: rubygem-ensure_valid_encoding  - Replace bad bytes in given encoding with replacement strings
 #642601 ASSIGNED   - Jozef Zigmund - Review Request: rubygem-uuid - Ruby UUID generator based on RFC 4122
 #979749 ASSIGNED   - Josef Stribny - Review Request: rubygem-time-lord - Managing concepts of time and space in Ruby
 #839649 ASSIGNED   - Josef Stribny - Review Request: rubygem-rails_best_practices - a code metric tool for rails codes, written in Ruby.
@@ -56,5 +59,4 @@
 #787350 ASSIGNED   - Bohuslav "Slavek" Kabrda - Review Request: rubygem-rspec-puppet - RSpec tests for your Puppet manifests
 #683790 ASSIGNED   - Bohuslav "Slavek" Kabrda - Review Request: rubygem-hoe-yard - A Hoe plug-in for generating YARD documentation
 #1015253 ASSIGNED   - Björn "besser82" Esser - Review Request: rubygem-svn2git - A tool for migrating SVN projects to Git
-#1017994 ASSIGNED   - Björn "besser82" Esser - Review Request: rubygem-climate_control - Modify your ENV easily
 #905240 ASSIGNED   - Arun S A G - Review Request: rubygem-log4r - Comprehensive and flexible logging library for ruby

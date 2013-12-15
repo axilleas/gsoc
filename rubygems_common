@@ -25,6 +25,7 @@ dotenv
 erubis
 eventmachine
 execjs
+faraday
 fssm
 haml
 haml-rails

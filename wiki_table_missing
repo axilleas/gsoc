@@ -5,7 +5,11 @@
 !Bugzilla id
 !Status
 |-
-|backports
+|actionpack-action_caching
+| - 
+| - 
+|-
+|actionpack-page_caching
 | - 
 | - 
 |-
@@ -42,10 +46,6 @@
 | - 
 |-
 |escape_utils
-| - 
-| - 
-|-
-|faraday
 | - 
 | - 
 |-
@@ -106,10 +106,6 @@
 | - 
 |-
 |gitlab_omniauth-ldap
-| - 
-| - 
-|-
-|gon
 | - 
 | - 
 |-
@@ -193,6 +189,10 @@
 | - 
 | - 
 |-
+|rack-cors
+| - 
+| - 
+|-
 |raphael-rails
 | - 
 | - 
@@ -257,10 +257,6 @@
 | - 
 | - 
 |-
-|turbolinks
-| - 
-| - 
-|-
 |twitter-stream
 | - 
 | - 
@@ -274,8 +270,8 @@
 |NEW
 |-
 |virtus
-| - 
-| - 
+|[https://bugzilla.redhat.com/show_bug.cgi?id=1040180 1040180]
+|NEW
 |-
 |yajl-ruby
 |[https://bugzilla.redhat.com/show_bug.cgi?id=823351 823351]

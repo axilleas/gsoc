@@ -10,7 +10,7 @@ import pkgwat.api
 
 # Declare files
 
-gitlab_gems_file = os.path.realpath('gitlab63-gems')
+gitlab_gems_file = os.path.realpath('gitlab64-gems')
 rubygems_fedora = os.path.realpath('rubygems_fedora')
 rubygems_gitlab = os.path.realpath('rubygems_gitlab')
 rubygems_missing = os.path.realpath('rubygems_missing')

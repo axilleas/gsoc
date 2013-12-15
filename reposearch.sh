@@ -5,7 +5,7 @@ fedora_gems=$PWD/rubygems_fedora
 bugzilla_gems_raw=$PWD/rubygems_bugzilla_raw
 bugzilla_gems=$PWD/rubygems_bugzilla
 
-# Remove files if already exist
+# Remove files if they already exist
 ls -l | grep rubygem > /dev/null 2>&1
 if [ '$?' = '0' ];
 then
@@ -28,7 +28,7 @@ echo 'Searching Bugzilla for Review Requests...'
 bugzilla query --product=fedora --bug_status=NEW,ASSIGNED --component='Package Review' --short_desc='rubygem-' | sort -k2 -r > $bugzilla_gems_raw
 
 # Keep names only
-bugzilla query --product=fedora --bug_status=new,assigned --component='Package Review' --short_desc='rubygem-' \
+bugzilla query --product=fedora --bug_status=NEW,ASSIGNED --component='Package Review' --short_desc='rubygem-' \
   | awk 'BEGIN { FS = " - " } ; { print $3 }' | awk 'BEGIN { FS = ":" } ; { print $2 }' | sed -e 's/ rubygem-//' \
   | sort -k1 > $bugzilla_gems
 

@@ -8,7 +8,6 @@ devise
 devise-async
 enumerize
 escape_utils
-faraday
 faraday_middleware
 font-awesome-rails
 foreman

@@ -10,40 +10,52 @@
 |GitLab same as Upstream?
 |-
 |actionmailer
-|3.2.15
-|4.0.1
-|4.0.1
-|<font color="red">'''NO'''</font>
+|4.0.2
+|4.0.2
+|4.0.2
+|<font color="green">'''YES'''</font>
 |-
 |actionpack
-|3.2.15
-|4.0.1
-|4.0.1
-|<font color="red">'''NO'''</font>
+|4.0.2
+|4.0.2
+|4.0.2
+|<font color="green">'''YES'''</font>
+|-
+|actionpack-action_caching
+|1.1.0
+|None
+|1.1.0
+|<font color="green">'''YES'''</font>
+|-
+|actionpack-page_caching
+|1.0.2
+|None
+|1.0.2
+|<font color="green">'''YES'''</font>
 |-
 |activemodel
-|3.2.15
-|4.0.1
-|4.0.1
-|<font color="red">'''NO'''</font>
+|4.0.2
+|4.0.2
+|4.0.2
+|<font color="green">'''YES'''</font>
 |-
 |activerecord
-|3.2.15
-|4.0.1
-|4.0.1
-|<font color="red">'''NO'''</font>
+|4.0.2
+|4.0.2
+|4.0.2
+|<font color="green">'''YES'''</font>
 |-
-|activeresource
-|3.2.15
-|4.0.0
-|4.0.0
-|<font color="red">'''NO'''</font>
+|activerecord-deprecated_finders
+|1.0.3
+|1.0.3
+|1.0.3
+|<font color="green">'''YES'''</font>
 |-
 |activesupport
-|3.2.15
-|4.0.1
-|4.0.1
-|<font color="red">'''NO'''</font>
+|4.0.2
+|4.0.2
+|4.0.2
+|<font color="green">'''YES'''</font>
 |-
 |acts-as-taggable-on
 |2.4.1
@@ -52,58 +64,58 @@
 |<font color="green">'''YES'''</font>
 |-
 |arel
-|3.0.2
-|4.0.0
 |4.0.1
+|4.0.0
+|5.0.0
 |<font color="red">'''NO'''</font>
 |-
 |asciidoctor
-|0.1.3
+|0.1.4
 |0.1.3
 |0.1.4
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
-|backports
-|3.3.2
-|3.3.4
-|3.3.5
-|<font color="red">'''NO'''</font>
+|atomic
+|1.1.14
+|1.1.9
+|1.1.14
+|<font color="green">'''YES'''</font>
+|-
+|axiom-types
+|0.0.5
+|0.0.5
+|0.0.5
+|<font color="green">'''YES'''</font>
 |-
 |bcrypt-ruby
-|3.1.1
 |3.1.2
 |3.1.2
-|<font color="red">'''NO'''</font>
+|3.1.2
+|<font color="green">'''YES'''</font>
 |-
 |bootstrap-sass
 |2.3.2.2
 |2.3.2.2
-|3.0.2.1
+|3.0.3.0
 |<font color="red">'''NO'''</font>
 |-
 |builder
-|3.0.4
+|3.1.4
 |3.1.4
 |3.2.2
 |<font color="red">'''NO'''</font>
 |-
-|bundler
-|1.5.0.rc.1
-|1.3.5
-|1.3.5
-|<font color="red">'''NO'''</font>
-|-
 |carrierwave
-|0.8.0
+|0.9.0
 |None
 |0.9.0
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |celluloid
-|0.14.1
+|0.15.2
 |None
 |0.15.2
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |charlock_holmes
 |0.6.9.4
@@ -123,11 +135,17 @@
 |1.2.9
 |<font color="green">'''YES'''</font>
 |-
+|coercible
+|1.0.0
+|1.0.0
+|1.0.0
+|<font color="green">'''YES'''</font>
+|-
 |coffee-rails
-|3.2.2
+|4.0.1
 |4.0.0
 |4.0.1
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |coffee-script
 |2.2.0
@@ -154,31 +172,31 @@
 |<font color="green">'''YES'''</font>
 |-
 |compass-rails
+|1.1.1
 |1.0.3
-|1.0.3
-|1.0.3
-|<font color="green">'''YES'''</font>
+|1.1.2
+|<font color="red">'''NO'''</font>
 |-
 |connection_pool
-|1.1.0
+|1.2.0
 |None
 |1.2.0
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |d3_rails
 |3.1.10
 |None
-|3.3.10
+|3.3.11
 |<font color="red">'''NO'''</font>
 |-
 |descendants_tracker
-|0.0.1
 |0.0.3
 |0.0.3
-|<font color="red">'''NO'''</font>
+|0.0.3
+|<font color="green">'''YES'''</font>
 |-
 |devise
-|2.2.5
+|3.0.4
 |None
 |3.2.2
 |<font color="red">'''NO'''</font>
@@ -196,16 +214,22 @@
 |<font color="green">'''YES'''</font>
 |-
 |dotenv
-|0.8.0
+|0.9.0
 |0.8.0
 |0.9.0
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |enumerize
-|0.6.1
+|0.7.0
 |None
 |0.7.0
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
+|-
+|equalizer
+|0.0.8
+|0.0.8
+|0.0.8
+|<font color="green">'''YES'''</font>
 |-
 |erubis
 |2.7.0
@@ -232,10 +256,10 @@
 |<font color="green">'''YES'''</font>
 |-
 |faraday
-|0.8.7
 |0.8.8
 |0.8.8
-|<font color="red">'''NO'''</font>
+|0.8.8
+|<font color="green">'''YES'''</font>
 |-
 |faraday_middleware
 |0.9.0
@@ -262,7 +286,7 @@
 |<font color="green">'''YES'''</font>
 |-
 |gemoji
-|1.2.1
+|1.3.1
 |None
 |1.5.0
 |<font color="red">'''NO'''</font>
@@ -276,8 +300,8 @@
 |github-markup
 |0.7.5
 |None
-|0.7.5
-|<font color="green">'''YES'''</font>
+|1.0.0
+|<font color="red">'''NO'''</font>
 |-
 |gitlab-flowdock-git-hook
 |0.4.2.2
@@ -292,10 +316,10 @@
 |<font color="green">'''YES'''</font>
 |-
 |gitlab-grack
-|1.1.0
+|2.0.0.pre
 |None
 |1.1.0
-|<font color="green">'''YES'''</font>
+|<font color="red">'''NO'''</font>
 |-
 |gitlab-grit
 |2.6.3
@@ -316,10 +340,10 @@
 |<font color="green">'''YES'''</font>
 |-
 |gitlab_git
-|3.1.0
+|4.0.0.pre
 |None
 |3.1.0
-|<font color="green">'''YES'''</font>
+|<font color="red">'''NO'''</font>
 |-
 |gitlab_meta
 |6.0
@@ -333,17 +357,11 @@
 |1.0.3
 |<font color="green">'''YES'''</font>
 |-
-|gon
-|4.1.1
-|None
-|4.1.1
-|<font color="green">'''YES'''</font>
-|-
 |grape
-|0.4.1
+|0.6.1
 |None
 |0.6.1
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |grape-entity
 |0.3.0
@@ -352,22 +370,22 @@
 |<font color="green">'''YES'''</font>
 |-
 |haml
-|4.0.3
+|4.0.4
 |3.1.7
 |4.0.4
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |haml-rails
-|0.4
-|0.4
 |0.5.1
+|0.4
+|0.5.2
 |<font color="red">'''NO'''</font>
 |-
 |hashie
-|1.2.0
 |2.0.5
 |2.0.5
-|<font color="red">'''NO'''</font>
+|2.0.5
+|<font color="green">'''YES'''</font>
 |-
 |hike
 |1.2.3
@@ -384,14 +402,14 @@
 |http_parser.rb
 |0.5.3
 |None
-|0.5.3
-|<font color="green">'''YES'''</font>
+|0.6.0
+|<font color="red">'''NO'''</font>
 |-
 |httparty
-|0.11.0
+|0.12.0
 |0.10.2
 |0.12.0
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |httpauth
 |0.2.0
@@ -400,19 +418,19 @@
 |<font color="green">'''YES'''</font>
 |-
 |i18n
-|0.6.5
-|0.6.4
-|0.6.5
+|0.6.9
+|0.6.9
+|0.6.9
 |<font color="green">'''YES'''</font>
 |-
-|journey
-|1.0.4
-|1.0.4
-|1.0.4
+|ice_nine
+|0.10.0
+|0.10.0
+|0.10.0
 |<font color="green">'''YES'''</font>
 |-
 |jquery-atwho-rails
-|0.3.0
+|0.3.3
 |None
 |0.4.1
 |<font color="red">'''NO'''</font>
@@ -424,16 +442,22 @@
 |<font color="red">'''NO'''</font>
 |-
 |jquery-turbolinks
-|1.0.0
+|2.0.1
 |None
 |2.0.1
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |jquery-ui-rails
 |2.0.2
 |None
-|4.1.0
+|4.1.1
 |<font color="red">'''NO'''</font>
+|-
+|json
+|1.8.1
+|1.7.7
+|1.8.1
+|<font color="green">'''YES'''</font>
 |-
 |jwt
 |0.1.8
@@ -448,16 +472,16 @@
 |<font color="red">'''NO'''</font>
 |-
 |kgio
-|2.8.0
+|2.8.1
 |2.8.0
 |2.8.1
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |libv8
-|3.11.8.17
+|3.16.14.3
 |None
 |3.16.14.3
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |mail
 |2.5.4
@@ -469,6 +493,12 @@
 |1.25.1
 |1.19
 |2.0
+|<font color="red">'''NO'''</font>
+|-
+|minitest
+|4.7.5
+|4.7.0
+|5.2.0
 |<font color="red">'''NO'''</font>
 |-
 |modernizr
@@ -484,10 +514,10 @@
 |<font color="green">'''YES'''</font>
 |-
 |multi_xml
-|0.5.4
+|0.5.5
 |0.5.2
 |0.5.5
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |multipart-post
 |1.2.0
@@ -510,7 +540,7 @@
 |nokogiri
 |1.5.10
 |1.6.0
-|1.6.0
+|1.6.1
 |<font color="red">'''NO'''</font>
 |-
 |oauth
@@ -532,16 +562,16 @@
 |<font color="green">'''YES'''</font>
 |-
 |omniauth-github
-|1.1.0
+|1.1.1
 |None
 |1.1.1
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |omniauth-google-oauth2
-|0.1.19
+|0.2.1
 |None
 |0.2.1
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |omniauth-oauth
 |1.0.1
@@ -556,16 +586,16 @@
 |<font color="green">'''YES'''</font>
 |-
 |omniauth-twitter
-|0.0.17
+|1.0.1
 |None
 |1.0.1
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |orm_adapter
-|0.4.0
+|0.5.0
 |0.4.0
 |0.5.0
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |pg
 |0.15.1
@@ -582,7 +612,13 @@
 |posix-spawn
 |0.3.6
 |None
-|0.3.6
+|0.3.8
+|<font color="red">'''NO'''</font>
+|-
+|protected_attributes
+|1.0.5
+|1.0.3
+|1.0.5
 |<font color="green">'''YES'''</font>
 |-
 |pyu-ruby-sasl
@@ -592,10 +628,10 @@
 |<font color="green">'''YES'''</font>
 |-
 |rack
-|1.4.5
 |1.5.2
 |1.5.2
-|<font color="red">'''NO'''</font>
+|1.5.2
+|<font color="green">'''YES'''</font>
 |-
 |rack-accept
 |0.4.5
@@ -604,15 +640,15 @@
 |<font color="green">'''YES'''</font>
 |-
 |rack-attack
-|2.2.1
+|2.3.0
 |None
 |2.3.0
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
-|rack-cache
-|1.2
-|1.2
-|1.2
+|rack-cors
+|0.2.9
+|None
+|0.2.9
 |<font color="green">'''YES'''</font>
 |-
 |rack-mount
@@ -622,15 +658,9 @@
 |<font color="green">'''YES'''</font>
 |-
 |rack-protection
-|1.5.0
+|1.5.1
 |1.5.0
 |1.5.1
-|<font color="red">'''NO'''</font>
-|-
-|rack-ssl
-|1.3.3
-|1.3.2
-|1.3.3
 |<font color="green">'''YES'''</font>
 |-
 |rack-test
@@ -640,22 +670,28 @@
 |<font color="green">'''YES'''</font>
 |-
 |rails
-|3.2.15
-|4.0.1
-|4.0.1
-|<font color="red">'''NO'''</font>
+|4.0.2
+|4.0.2
+|4.0.2
+|<font color="green">'''YES'''</font>
+|-
+|rails-observers
+|0.1.2
+|0.1.2
+|0.1.2
+|<font color="green">'''YES'''</font>
 |-
 |railties
-|3.2.15
-|4.0.1
-|4.0.1
-|<font color="red">'''NO'''</font>
+|4.0.2
+|4.0.2
+|4.0.2
+|<font color="green">'''YES'''</font>
 |-
 |raindrops
-|0.11.0
+|0.12.0
 |0.10.0
 |0.12.0
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |rake
 |10.1.0
@@ -669,12 +705,6 @@
 |2.1.2
 |<font color="green">'''YES'''</font>
 |-
-|rdoc
-|3.12.2
-|4.0.1
-|4.0.1
-|<font color="red">'''NO'''</font>
-|-
 |redcarpet
 |2.2.2
 |2.1.1
@@ -682,40 +712,40 @@
 |<font color="red">'''NO'''</font>
 |-
 |redis
-|3.0.4
+|3.0.6
 |3.0.4
 |3.0.6
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |redis-actionpack
-|3.2.4
+|4.0.0
 |None
 |4.0.0
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |redis-activesupport
-|3.2.4
+|4.0.0
 |None
 |4.0.0
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |redis-namespace
-|1.3.1
-|1.3.2
-|1.3.2
-|<font color="red">'''NO'''</font>
+|1.4.1
+|1.4.1
+|1.4.1
+|<font color="green">'''YES'''</font>
 |-
 |redis-rack
-|1.4.4
+|1.5.0
 |None
 |1.5.0
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |redis-rails
-|3.2.4
+|4.0.0
 |None
 |4.0.0
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |redis-store
 |1.1.4
@@ -736,10 +766,10 @@
 |<font color="red">'''NO'''</font>
 |-
 |sanitize
-|2.0.3
 |2.0.6
 |2.0.6
-|<font color="red">'''NO'''</font>
+|2.0.6
+|<font color="green">'''YES'''</font>
 |-
 |sass
 |3.2.12
@@ -748,22 +778,22 @@
 |<font color="green">'''YES'''</font>
 |-
 |sass-rails
-|3.2.6
+|4.0.1
 |4.0.0
 |4.0.1
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |seed-fu
-|2.2.0
+|2.3.0
 |None
 |2.3.0
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |select2-rails
-|3.4.2
+|3.5.2
 |None
 |3.5.2
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |settingslogic
 |2.0.9
@@ -772,10 +802,10 @@
 |<font color="green">'''YES'''</font>
 |-
 |sidekiq
-|2.14.0
+|2.17.0
 |None
 |2.17.0
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |simple_oauth
 |0.1.9
@@ -784,10 +814,10 @@
 |<font color="red">'''NO'''</font>
 |-
 |sinatra
-|1.4.3
+|1.4.4
 |1.4.3
 |1.4.4
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |six
 |0.2.0
@@ -796,16 +826,22 @@
 |<font color="green">'''YES'''</font>
 |-
 |slim
-|2.0.0
+|2.0.2
 |1.3.8
 |2.0.2
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |sprockets
-|2.2.2
+|2.10.1
 |2.8.2
 |2.10.1
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
+|-
+|sprockets-rails
+|2.0.1
+|2.0.0
+|2.0.1
+|<font color="green">'''YES'''</font>
 |-
 |stamp
 |0.5.0
@@ -826,21 +862,27 @@
 |<font color="red">'''NO'''</font>
 |-
 |temple
-|0.6.5
+|0.6.7
 |0.6.3
 |0.6.7
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |therubyracer
-|0.11.4
+|0.12.0
 |0.11.0
 |0.12.0
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |thor
 |0.18.1
 |0.18.1
 |0.18.1
+|<font color="green">'''YES'''</font>
+|-
+|thread_safe
+|0.1.3
+|0.1.3
+|0.1.3
 |<font color="green">'''YES'''</font>
 |-
 |tilt
@@ -856,10 +898,10 @@
 |<font color="green">'''YES'''</font>
 |-
 |tinder
-|1.9.2
+|1.9.3
 |None
 |1.9.3
-|<font color="red">'''NO'''</font>
+|<font color="green">'''YES'''</font>
 |-
 |treetop
 |1.4.15
@@ -868,10 +910,10 @@
 |<font color="green">'''YES'''</font>
 |-
 |turbolinks
-|1.2.0
+|2.0.0
 |1.1.1
-|1.3.1
-|<font color="red">'''NO'''</font>
+|2.0.0
+|<font color="green">'''YES'''</font>
 |-
 |twitter-stream
 |0.1.16
@@ -886,9 +928,9 @@
 |<font color="red">'''NO'''</font>
 |-
 |uglifier
-|2.1.1
+|2.3.2
 |2.3.0
-|2.3.1
+|2.3.3
 |<font color="red">'''NO'''</font>
 |-
 |underscore-rails
@@ -904,10 +946,10 @@
 |<font color="red">'''NO'''</font>
 |-
 |virtus
-|0.5.5
+|1.0.1
 |None
-|1.0.0
-|<font color="red">'''NO'''</font>
+|1.0.1
+|<font color="green">'''YES'''</font>
 |-
 |warden
 |1.2.3
