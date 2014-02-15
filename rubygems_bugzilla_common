@@ -1,5 +1,6 @@
-chosen-rails
 github-markdown
+chosen-rails
+virtus
 yajl-ruby
 unicorn
 connection_pool

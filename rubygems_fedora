@@ -12,6 +12,7 @@ activeldap
 activemodel
 activerecord
 activerecord-deprecated_finders
+activerecord-nulldb-adapter
 activeresource
 activesupport
 acts-as-taggable-on
@@ -54,6 +55,7 @@ bundler
 bundler_ext
 bunny
 cairo
+cairo-gobject
 capillary
 capybara
 charlock_holmes
@@ -66,6 +68,8 @@ climate_control
 clouddb
 cloudfiles
 cloudservers
+clutter
+cocaine
 coderay
 coercible
 coffee-rails
@@ -94,6 +98,7 @@ delayed_job
 delayed_job_active_record
 delorean
 deltacloud-client
+dependor
 descendants_tracker
 diff-lcs
 ditz
@@ -140,6 +145,7 @@ gem-nice-install
 gem-patch
 gem2rpm
 gemcutter
+gemnasium-parser
 geoip
 gettext
 gettext_i18n_rails
@@ -218,6 +224,7 @@ little-plugger
 locale
 lockfile
 logging
+loofah
 mail
 main
 map
@@ -255,6 +262,7 @@ narray
 narray
 net-http-digest_auth
 net-http-persistent
+net-irc
 net-ldap
 net-ping
 net-scp
@@ -280,6 +288,7 @@ openshift-origin-node
 openstack
 openstack-compute
 openstack-quantum-client
+org-ruby
 origin
 orm_adapter
 paint
@@ -302,6 +311,7 @@ pkgwat
 plist
 polyglot
 poppler
+posix-spawn
 pr_geohash
 prawn
 progressbar
@@ -311,6 +321,7 @@ psych
 puppet-lint
 qpid_messaging
 qpid_proton
+rabbit
 rabl
 rack
 rack-accept
@@ -348,6 +359,7 @@ resque
 rest-client
 restr
 reststop
+rgen
 rhc
 riddle
 right_aws

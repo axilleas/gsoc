@@ -21,10 +21,6 @@
 | - 
 | - 
 |-
-|chosen-rails
-|[https://bugzilla.redhat.com/show_bug.cgi?id=967396 967396]
-|ASSIGNED
-|-
 |connection_pool
 |[https://bugzilla.redhat.com/show_bug.cgi?id=967334 967334]
 |ASSIGNED
@@ -38,6 +34,10 @@
 | - 
 |-
 |devise-async
+| - 
+| - 
+|-
+|email_validator
 | - 
 | - 
 |-
@@ -69,10 +69,6 @@
 |[https://bugzilla.redhat.com/show_bug.cgi?id=1026052 1026052]
 |ASSIGNED
 |-
-|github-markup
-| - 
-| - 
-|-
 |gitlab-flowdock-git-hook
 | - 
 | - 
@@ -93,10 +89,6 @@
 | - 
 | - 
 |-
-|gitlab-pygments.rb
-| - 
-| - 
-|-
 |gitlab_git
 | - 
 | - 
@@ -106,6 +98,10 @@
 | - 
 |-
 |gitlab_omniauth-ldap
+| - 
+| - 
+|-
+|gon
 | - 
 | - 
 |-
@@ -142,10 +138,6 @@
 | - 
 |-
 |kaminari
-| - 
-| - 
-|-
-|libv8
 | - 
 | - 
 |-
@@ -269,11 +261,11 @@
 |[https://bugzilla.redhat.com/show_bug.cgi?id=786636 786636]
 |NEW
 |-
+|unicorn-worker-killer
+| - 
+| - 
+|-
 |virtus
 |[https://bugzilla.redhat.com/show_bug.cgi?id=1040180 1040180]
 |NEW
-|-
-|yajl-ruby
-|[https://bugzilla.redhat.com/show_bug.cgi?id=823351 823351]
-|ASSIGNED
 |}
