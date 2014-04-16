@@ -5,11 +5,11 @@
 !Bugzilla id
 !Status
 |-
-|actionpack-action_caching
+|ace-rails-ap
 | - 
 | - 
 |-
-|actionpack-page_caching
+|bcrypt
 | - 
 | - 
 |-
@@ -22,10 +22,14 @@
 | - 
 |-
 |connection_pool
-|[https://bugzilla.redhat.com/show_bug.cgi?id=967334 967334]
-|ASSIGNED
+| - 
+| - 
 |-
 |d3_rails
+| - 
+| - 
+|-
+|default_value_for
 | - 
 | - 
 |-
@@ -41,13 +45,17 @@
 | - 
 | - 
 |-
+|emoji
+| - 
+| - 
+|-
 |enumerize
 | - 
 | - 
 |-
 |escape_utils
-| - 
-| - 
+|[https://bugzilla.redhat.com/show_bug.cgi?id=1046995 1046995]
+|NEW
 |-
 |faraday_middleware
 | - 
@@ -61,19 +69,15 @@
 | - 
 | - 
 |-
-|gemoji
+|gemnasium-gitlab-service
 | - 
 | - 
 |-
-|github-markdown
-|[https://bugzilla.redhat.com/show_bug.cgi?id=1026052 1026052]
-|ASSIGNED
+|github-markup
+| - 
+| - 
 |-
 |gitlab-flowdock-git-hook
-| - 
-| - 
-|-
-|gitlab-gollum-lib
 | - 
 | - 
 |-
@@ -89,6 +93,10 @@
 | - 
 | - 
 |-
+|gitlab_emoji
+| - 
+| - 
+|-
 |gitlab_git
 | - 
 | - 
@@ -98,6 +106,10 @@
 | - 
 |-
 |gitlab_omniauth-ldap
+| - 
+| - 
+|-
+|gollum-lib
 | - 
 | - 
 |-
@@ -141,7 +153,7 @@
 | - 
 | - 
 |-
-|modernizr
+|nprogress-rails
 | - 
 | - 
 |-
@@ -166,10 +178,6 @@
 | - 
 |-
 |omniauth-twitter
-| - 
-| - 
-|-
-|posix-spawn
 | - 
 | - 
 |-
@@ -209,6 +217,10 @@
 | - 
 | - 
 |-
+|rouge
+| - 
+| - 
+|-
 |rubyntlm
 | - 
 | - 
@@ -222,8 +234,8 @@
 | - 
 |-
 |settingslogic
-| - 
-| - 
+|[https://bugzilla.redhat.com/show_bug.cgi?id=1076976 1076976]
+|NEW
 |-
 |sidekiq
 | - 
@@ -234,6 +246,10 @@
 | - 
 |-
 |six
+| - 
+| - 
+|-
+|slack-notifier
 | - 
 | - 
 |-
@@ -258,14 +274,18 @@
 | - 
 |-
 |unicorn
-|[https://bugzilla.redhat.com/show_bug.cgi?id=786636 786636]
-|NEW
+|[https://bugzilla.redhat.com/show_bug.cgi?id=1065685 1065685]
+|ASSIGNED
 |-
 |unicorn-worker-killer
 | - 
 | - 
 |-
+|version_sorter
+| - 
+| - 
+|-
 |virtus
-|[https://bugzilla.redhat.com/show_bug.cgi?id=1040180 1040180]
-|NEW
+| - 
+| - 
 |}

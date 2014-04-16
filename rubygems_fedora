@@ -37,6 +37,7 @@ audited
 audited-activerecord
 authlogic
 awesome_print
+awesome_spawn
 aws
 aws-sdk
 axiom-types
@@ -44,6 +45,7 @@ backports
 bacon
 bcrypt-ruby
 bigdecimal
+bogus
 bootstrap-sass
 bourne
 boxgrinder-build
@@ -193,6 +195,7 @@ hydra
 i18n
 i18n_data
 icalendar
+icaro
 ice_nine
 idn
 imagesize
@@ -245,6 +248,7 @@ mixlib-cli
 mixlib-config
 mixlib-log
 mixlib-shellout
+mizuho
 mkrf
 mobileesp_converted
 mocha
@@ -294,6 +298,7 @@ orm_adapter
 paint
 pam
 pango
+parallel
 paranoia
 parse-cron
 parseconfig
@@ -407,6 +412,7 @@ scoped_search
 scruffy
 selenium-webdriver
 sequel
+serialport
 session
 sexp_processor
 shindo
