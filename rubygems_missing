@@ -1,7 +1,5 @@
 ace-rails-ap
 carrierwave
-celluloid
-connection_pool
 d3_rails
 default_value_for
 devise
@@ -34,7 +32,6 @@ http_parser.rb
 httpauth
 jquery-atwho-rails
 jquery-turbolinks
-jquery-ui-rails
 jwt
 kaminari
 libv8-3.16.14.3-x86_64
@@ -63,11 +60,9 @@ simple_oauth
 six
 slack-notifier
 stamp
-stringex
 tinder
 twitter-stream
 underscore-rails
 unicorn
 unicorn-worker-killer
 version_sorter
-virtus
